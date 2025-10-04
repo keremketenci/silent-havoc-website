@@ -1,0 +1,79 @@
+.ButtonSocials {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: 0.1s;
+}
+
+.ButtonSocials svg {
+  color: white;
+  width: 50px;
+  height: 50px;
+  z-index: 9;
+}
+
+.ButtonSocials-instagram {
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.ButtonSocials-linkedin {
+  background-color: #0a66c2;
+}
+
+.ButtonSocials-discord {
+  background-color: #5865f2;
+}
+
+.ButtonSocials-github {
+  background: black;
+}
+
+.ButtonSocials-x {
+  background: black;
+}
+
+.ButtonSocials-youtube {
+  background: rgb(255, 33, 33);
+}
+
+.ButtonSocials-patreon {
+  background: #F44336
+}
+
+.ButtonSocials-itchio {
+  background: #FA5C5C
+}
+
+.ButtonSocials-whatsapp {
+  background: linear-gradient(120deg, #02ff2c, #008a12);
+}
+
+.ButtonSocials-twitter {
+  background: rgb(69, 187, 255);
+  transform: scale(0.85);
+}
+
+.ButtonSocials::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: var(--color-gray-900);
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+
+.ButtonSocials:hover::before {
+  width: 0px;
+  height: 0px;
+}

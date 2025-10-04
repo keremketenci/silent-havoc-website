@@ -1,0 +1,5 @@
+.JoinUsCard {
+    background-color: var(--color-gray-900) !important;
+    color: var(--color-white) !important;
+    border: var(--color-slate-800) 1px solid !important;
+}

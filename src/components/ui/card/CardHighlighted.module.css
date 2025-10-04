@@ -1,0 +1,126 @@
+.FormCardHighlighted {
+  background-image: linear-gradient(163deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  border-radius: 21px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+
+.FormCardHighlighted2 {
+  border-radius: 20px;
+  transition: all .2s;
+  width: 100%;
+  height: 100%;
+}
+
+.FormCardHighlighted2:hover {
+  transform: scaleX(0.99) scaleY(0.99);
+  border-radius: 18px;
+}
+
+.FormCardHighlighted:hover {
+  box-shadow: 0 0 30px 3px var(--color-accent);
+}
+
+.SubscribeCardHighlighted {
+  background-image: linear-gradient(163deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  border-radius: 21px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+
+.SubscribeCardHighlighted2 {
+  border-radius: 20px;
+  transition: all .2s;
+  width: 100%;
+  height: 100%;
+}
+
+.SubscribeCardHighlighted2:hover {
+  transform: scaleX(0.99) scaleY(0.99);
+  border-radius: 20px;
+}
+@media (min-width: 1024px) {
+  .SubscribeCardHighlighted2:hover {
+    transform: scaleX(1) scaleY(1);
+    border-radius: 20px;
+  }
+}
+
+.SubscribeCardHighlighted:hover {
+  box-shadow: 0 0 30px 3px var(--color-accent);
+}
+
+.JoinUsCardHighlighted {
+  background-image: linear-gradient(163deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  border-radius: 21px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+
+.JoinUsCardHighlighted2 {
+  border-radius: 20px;
+  transition: all .2s;
+  width: 100%;
+  height: 100%;
+}
+
+.JoinUsCardHighlighted2:hover {
+  transform: scaleX(0.99) scaleY(0.99);
+  border-radius: 18px;
+}
+
+.JoinUsCardHighlighted:hover {
+  box-shadow: 0 0 30px 3px var(--color-accent);
+}
+
+.VerticalCardHighlighted {
+  background-image: linear-gradient(163deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  border-radius: 21px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+
+.VerticalCardHighlighted2 {
+  border-radius: 20px;
+  transition: all .2s;
+  width: 100%;
+  height: 100%;
+}
+
+.VerticalCardHighlighted2:hover {
+  transform: scaleX(0.99) scaleY(0.99);
+  border-radius: 18px;
+}
+
+.VerticalCardHighlighted:hover {
+  box-shadow: 0 0 30px 3px var(--color-accent);
+}
+
+.HorizontalCardHighlighted {
+  background-image: linear-gradient(163deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  border-radius: 21px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+
+.HorizontalCardHighlighted2 {
+  border-radius: 20px;
+  transition: all .2s;
+  width: 100%;
+  height: 100%;
+}
+
+.HorizontalCardHighlighted2:hover {
+  transform: scaleX(0.99) scaleY(0.98);
+  border-radius: 18px;
+}
+
+.HorizontalCardHighlighted:hover {
+  box-shadow: 0 0 30px 3px var(--color-accent);
+}
+

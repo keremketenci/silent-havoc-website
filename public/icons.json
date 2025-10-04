@@ -1,0 +1,108 @@
+{
+  "icons": [
+    {
+      "name": "emptyBlack",
+      "path": "/icons/emptyBlack.svg"
+    },
+    {
+      "name": "instagram",
+      "path": "/icons/socials/instagram.svg"
+    },
+    {
+      "name": "instagram2",
+      "path": "/icons/socials/instagram2.svg"
+    },
+    {
+      "name": "github",
+      "path": "/icons/socials/github.svg"
+    },
+    {
+      "name": "github2",
+      "path": "/icons/socials/github2.svg"
+    },
+    {
+      "name": "linkedin",
+      "path": "/icons/socials/linkedin.svg"
+    },
+    {
+      "name": "linkedin2",
+      "path": "/icons/socials/linkedin2.svg"
+    },
+    {
+      "name": "mail2",
+      "path": "/icons/socials/mail2.svg"
+    },
+    {
+      "name": "patreon",
+      "path": "/icons/socials/patreon.svg"
+    },
+    {
+      "name": "itchio",
+      "path": "/icons/socials/itchio.svg"
+    },
+    {
+      "name": "artstation",
+      "path": "/icons/socials/artstation.svg"
+    },
+    {
+      "name": "discord",
+      "path": "/icons/socials/discord.svg"
+    },
+    {
+      "name": "youtube",
+      "path": "/icons/socials/youtube.svg"
+    },
+    {
+      "name": "twitter",
+      "path": "/icons/socials/twitter.svg"
+    },
+    {
+      "name": "x",
+      "path": "/icons/socials/x.svg"
+    },
+    {
+      "name": "whatsapp",
+      "path": "/icons/socials/whatsapp.svg"
+    },
+    {
+      "name": "spotify",
+      "path": "/icons/socials/spotify.svg"
+    },
+    {
+      "name": "facebook",
+      "path": "/icons/socials/facebook.svg"
+    },
+    {
+      "name": "tr",
+      "path": "/icons/languages/tr.svg"
+    },
+    {
+      "name": "en",
+      "path": "/icons/languages/en.svg"
+    },
+    {
+      "name": "logo",
+      "path": "/icons/silenthavoc/logo.svg"
+    },
+    {
+      "name": "logoBlack",
+      "path": "/icons/silenthavoc/logo-black.svg"
+    },
+    {
+      "name": "logoGray",
+      "path": "/icons/silenthavoc/logo-gray.svg"
+    },
+    {
+      "name": "logoBlur",
+      "path": "/icons/silenthavoc/logo-editted-blur.svg"
+    },
+    {
+      "name": "clock",
+      "path": "/icons/clock.svg"
+    },
+    {
+      "name": "loading",
+      "path": "/icons/loading.svg"
+    }
+  ]
+}

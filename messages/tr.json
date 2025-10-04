@@ -1,0 +1,258 @@
+{
+  "Home": {
+    "title": "Silent Havoc'a Hoş Geldiniz",
+    "about": "Takımımız Temmuz 2025 de kurulup faaliyetlerine Eylül 2025 de başlamıştır. Silent Havoc Türkiye'de Su Altı Taarruz (S.A.T) Timi, yurtdışında Marine Special Forces ( Amerika Donanması Özel Kuvvetleri) taktikleri baz alınarak kurulmuş oyun planı ile sessiz ve yıkıcı güç olarak oynar ya da destek verir",
+    "Donate": {
+      "title": "Destek Olun",
+      "text": "Bizi desteklemek ve projelerimize katkıda bulunmak için aşağıdaki bağlantılardan bağış yapabilirsiniz"
+    }
+  },
+  "Team": {
+    "Roles": {
+      "Team-Captain": "Takım Kaptanı",
+      "Vice-Captain": "Yardımcı Kaptan",
+      "Member": "Takım Oyuncusu"
+    },
+    "InGame-Roles": {
+      "Entry-Fragger": "Öncü Saldıran",
+      "Support": "Destek",
+      "Sniper": "Keskin Nişancı",
+      "Lurker": "Sinsi",
+      "In-Game-Leader": "Oyun İçi Lider",
+      "Coach": "Koç",
+      "Analyst": "Analist",
+      "Strategist": "Stratejist"
+    },
+    "wanted": "ARANIYOR"
+  },
+  "JoinUs": {
+    "title": "Takım Arkadaşları Arıyoruz",
+    "Job": {
+      "Title": {
+        "member": "Üye"
+      },
+      "Time": {
+        "fullTime": "Tam Zamanlı",
+        "partTime": "Yarı Zamanlı",
+        "hybrid": "Hibrit"
+      },
+      "Type": {
+        "freelance": "Serbest Çalışma",
+        "volunteer": "Gönüllü"
+      },
+      "content": "Airsoft’a ilgisi olan, takım ruhuna sahip yeni üyeler arıyoruz! Disiplinli, adrenalin dolu ve eğlenceli bir ekibiz. Deneyimin olmasa bile fark etmez — önemli olan istekli olman ve kurallara saygı göstermen. Eğer sen de sahada yerini almak istiyorsan, bize katıl!"
+    },
+    "Form": {
+      "role": "Rol",
+      "subject": "Takım Üyeliği Başvurusu"
+    },
+    "Button": {
+      "apply": "Başvur"
+    }
+  },
+  "Contact": {
+    "title": "Bize Ulaşın",
+    "Card": {
+      "Content": {
+        "Mail": {
+          "contact": "contact",
+          "domain": "silent-havoc.com"
+        },
+        "phone": "(+90) 549 199 40 87",
+        "address": ""
+      },
+      "Description": {
+        "mail": "E-Posta",
+        "phone": "Telefon",
+        "address": "Adres"
+      }
+    },
+    "Form": {
+      "label": {
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "email": "E-Posta",
+        "phone": "Telefon",
+        "countryCode": "Ülke Kodu",
+        "phoneNumber": "Telefon Numarası",
+        "subject": "Konu",
+        "message": "Mesaj",
+        "equipment": "Ekipman",
+        "terms": "gizlilik politikası ve hizmet şartları",
+        "contactMethod": "Tercih Edilen İletişim Yöntemi",
+        "methods": {
+          "email": "E-Posta",
+          "phone": "Telefon"
+        }
+      },
+      "input-placeholder": {
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "email": "örnek@örnek.com",
+        "phone": "Telefon",
+        "countryCode": "90",
+        "phoneNumber": "555 555 55 55",
+        "subject": "Konu",
+        "message": "Mesaj...",
+        "equipment": "Ekipmanlarınızı buraya listeleyin...",
+        "terms": "gizlilik politikası ve hizmet şartlarını kabul ediyorum",
+        "contactMethod": "Nasıl iletişim kurmamızı istersiniz?"
+      },
+      "input-description": {
+        "firstName": "Adınız",
+        "lastName": "Soyadınız",
+        "email": "E-Posta adresiniz",
+        "phone": "Telefon Numaranız",
+        "countryCode": "Ülke Kodunuz",
+        "phoneNumber": "Telefon Numaranız",
+        "subject": "E-Posta'nın konusu",
+        "message": "Mesajınız",
+        "equipment": "Mevcut Ekipmanlarınız",
+        "terms": "gizlilik politikası ve hizmet şartlarını kabul etmelisiniz",
+        "contactMethod": "Sizinle nasıl iletişim kurmamızı istersiniz?"
+      },
+      "Button": {
+        "submit": "GÖNDER",
+        "sending": "Gönderiliyor..."
+      }
+    }
+  },
+  "Subscribe": {
+    "title": "Abone Olun",
+    "description": "Oyun takvimimizden ve güncellemelerimizden haberdar olmak için bültenimize abone olun",
+    "Form": {
+      "label": {
+        "email": "E-Posta"
+      },
+      "input-placeholder": {
+        "email": "örnek@örnek.com"
+      },
+      "input-description": {
+        "email": "E-Posta adresiniz"
+      }
+    },
+    "Button": {
+      "subscribe": "Abone Ol",
+      "subscribing": "Abone Olunuyor"
+    }
+  },
+  "Rules": {
+    "title": "Kurallar",
+    "Card": {
+      "Title": "Airsoft Kuralları",
+      "Description": "Oynamadan önce mutlaka kuralları okuyunuz"
+    },
+    "Sections": [
+      {
+        "id": "general",
+        "title": "Genel Kurallar",
+        "items": [
+          "TÜRKİYE’DE BİR ÇOK GRUBUN KENDİ KURALLARI VARDIR. BURADA GENEL OLAN KURALLAR YAZMAKTADIR.",
+          "TÜRKİYE CUMHURİYETİ, TÜRK BAYRAĞINA VE TÜRK KANUN VE GÖRGÜ KURALLARINA HARFİYEN UYMAK.",
+          "TÜRKİYE DE AIRSOFT OYNAMAK İÇİN 18 YAŞINI DOLDURMANIZ GEREKİYOR.",
+          "ARAZİDE VE SOSYAL MEDYA MECRALARINDA KÜFÜR, HAKARET, TAHRİK EDİCİ VEYA HASSAS OLDUĞU KONULARI TETİKLEYİCİ ŞEKİLDE YAKLAŞMAK KESİNLİKLE YASAKTIR.",
+          "OYUN ALANLARINDA TAKIM İÇİNDE VEYA RAKİP OYUNCULARI HAKKINDA İLERİ GERİ KONUŞMAK, KÜFÜR VEYA TAHRİK EDİCİ BİÇİMDE KONUŞMAK KESİNLİKLE YASAKTIR.",
+          "AIRSOFT SPORUNUN İÇERİSİNDE DİN, DİL, IRK, SİYASİ GÖRÜŞ VE FUTBOL KESİNLİKLE YASAKTIR.",
+          "AIRSOFT OYUNU OYNANAN YERİNİN TEMİZLİĞİ TÜM AIRSOFT OYUNCULARINDAN SORUMLUDUR.",
+          "OLASI BİR OLUMSUZ DURUMDA EN YAKIN KOLLU KUVVETLERE HABERDAR EDİLMESİ.",
+          "OYUNCAKLARIN BİR YERDEN BİR YERE TAŞINIRKEN TURUNCU UÇ TAKILI OLMASI, ARABADA VEYA DIŞARIDA TAŞINIRKEN GÖRÜLMEYECEK VE TEŞİR EDİLMEYECEK BİR ŞEKİLDE ÇANTA VS. ÇANTALARIN İÇİNDE TAŞINMASI."
+        ]
+      },
+      {
+        "id": "toy",
+        "title": "Oyuncak Kullanım Kuralları",
+        "items": [
+          "AIRSOFT OYUNCAKLARI SADECE 6mm PLASTİK BONCUK KULLANMAKTADIR.",
+          "OYUNCAKLARIN GÜCÜ 'FPS'(feet per second/fit,saniye) BİRİMİYLE ÖLÇÜLÜR.",
+          "TABANCA (330 FPS) TABANCALARIN GÜÇLERİNİN MAX. 330 FPS OLMASI GEREKİYOR VE 5 METRENİN ALTINA KULLANILMAMASI GEREKİYOR.",
+          "TÜFEKLER: (330 FPS CQB) BU TÜFEKLER YAKIN MESAFELER İÇİN ÜRETİLMİŞ OYUNCAKLARDIR. BUNLARDA AYNI TABANCALAR GİBİ 5 METRE ALTINDA KULLANILMAMASI GEREKİYOR.",
+          "(400 FPS ASSULT) BU GÜÇTE SINIRLANDIRILMIŞ TÜFEKLER 10 METRE ALTINDA KULLANILMAMASI GEREKİYOR.",
+          "(400 FPS HAFİF MAKİNALI) BU TÜFEKLER ÇOK FAZLA SERİ ATIŞ YAPTIĞI İÇİN 20 METRE ALTINDA KULLANILMAMASI GEREKİYOR. (M60, RPK, M249vs..)",
+          "GAZLI TÜFEKLER VE GÜÇLERİ BU KURALLARIN İÇERİSİNDEDİR.",
+          "KESKİN NIŞANCI TÜFEKLERİ: (550 FPS BOLT ACTION) BU TÜFEKLER AĞIR BONCUK İLE BERABER ÇOK GÜÇLÜ OLDUĞU İÇİN 30 METRENİN ALTINDA KULLANILMAMASI GEREKİYOR.",
+          "(450 FPS SEMİ SNİPER) BU TÜFEKLER İLE 20 METRENİN ALTINDA KULLANILMAMASI GEREKİYOR."
+        ]
+      },
+      {
+        "id": "in-game",
+        "title": "Oyun İçerisindeki Kurallar",
+        "items": [
+          "EĞER İKİ OYUNCU KARŞI KARŞIYA GELDİYSE VE İKİSİDE VURDUĞUNU İDDİA EDİYORSA, İKİ OYUNCUDA OYUNDAN ÇIKMASI GEREKİYOR.",
+          "OYUNUN OYNANCAĞI PLANLANDIĞI YERDEN ÇIKIP KARŞI OYUNCUYA ÜSTÜNLÜK KURACAK HAREKETLERİN YAPMAMASI GEREKİYOR. (KISACA HARİTA DIŞINA ÇIKMAK YASAK)",
+          "OYUN ESNASINDA HER NE OLURSA OLSUN KORUYUCU BALİSTİK GÖZLÜĞÜNÜZÜ ÇIKARMAK YASAKTIR.",
+          "HER OYUNCU VURULDUKTAN SONRA ELİNİ KALDIRIP, KÖŞELERİ DÖNERKEN VURULDUM DİYEREK OLUMSUZ YAŞANACAK KAZALARA KENDİSİ ÖNLEM ALMASI GEREKİYOR.",
+          "HER OYUNCU VURULDUKTAN SONRA PARLAK, FOSFORLU YADA ORMANA UYMAYAN RENK BİR BEZ ALIP ÜSTÜNE TAKMASI GEREKİYOR.",
+          "SAFE ZONE DEDİĞİMİZ YERDE OYUNCAKLARL ATIŞ YAPMAK KESİNLİKLE YASAKTIR.",
+          "OYUN ESNASINDA KARŞI TAKIMIN KULLANDIĞI TELSİZ FREKANSINA GİRİP DİNLEME YAPMAK YASAKTIR.",
+          "VURULAN BİR OYUNCU KONUŞMASI VEYA TAKTİK VERMESİ YADA DÜŞMANIN YERİNİ SÖYLEMESİ YASAKTIR.",
+          "SESSİZ ÖLÜM (SAHTE BIÇAK) KULLANIMINDA ÖLEN OYUNCU OYUNUN GİDİŞATINA ENGEL OLMAYACAK ŞEKİLDE SESSİZCE ALANI TERK ETMELİDİR.",
+          "BONCUĞUN ÜSTÜNÜZE GELDİĞİNİ DÜŞÜNÜYORSANIZ OYUNDAN ÇIKMANIZ GEREKİR. TEREDDÜTTE KALSANIZ DAHİ OYUNDAN ÇIKIN.",
+          "ORMANLIK ALANLARDA HER TÜRLÜ YANICI VEYA PATLAYICI MADDE KULLANMAMANIZ. OYUN ESNASINDA HİÇ BİR ŞEKİLDE SİGARA İÇMEMENİZ GEREKİYOR."
+        ]
+      }
+    ]
+  },
+  "Navbar": {
+    "Link": {
+      "home": "Anasayfa",
+      "team": "Takımımız",
+      "joinUs": "Bize Katılın",
+      "contact": "İletişim",
+      "rules": "Kurallar",
+      "gameServers": "Oyun Sunucularımız",
+      "cs2server": "Counter-Strike 2"
+    }
+  },
+  "Footer": {
+    "Link": {
+      "home": "Anasayfa",
+      "team": "Takımımız",
+      "joinUs": "Bize Katılın",
+      "contact": "İletişim",
+      "rules": "Kurallar"
+    },
+    "Copyright": {
+      "copyright": "Telif Hakkı",
+      "allRightsReserved": "Tüm hakları saklıdır",
+      "year": "2024"
+    },
+    "Domain": {
+      "text": "silent-havoc.com",
+      "link": "https://silent-havoc.com"
+    },
+    "studio": "Silent Havoc",
+    "designBy": "Tarafından Tasarlandı",
+    "developedBy": "Tarafından Geliştirildi"
+  },
+  "Toast": {
+    "CardTeam": {
+      "Email": {
+        "Copy": {
+          "success": "E-Mail Adresi Kopyalandı",
+          "failed": "E-Mail Adresi Kopyalanamadı. Lütfen tekrar deneyin",
+          "nolink": "Link Mevcut Değil",
+          "noemail": "E-Mail Adresi Mevcut Değil"
+        }
+      }
+    },
+    "ContactForm": {
+      "Email": {
+        "success": "Mesajınız başarıyla gönderildi",
+        "failed": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin"
+      }
+    },
+    "Subscribe": {
+      "Email": {
+        "success": "Başarı ile abone olundu",
+        "failed": "Abone Olunamadı. Lütfen daha sonra tekrar deneyin"
+      }
+    },
+    "GameServers": {
+      "ServerIp": {
+        "success": "Server Ip Kopyalandı",
+        "failed": "Server Ip Kopyalanamadı. Lütfen tekrar deneyin",
+        "noip": "Ip Adresi Mevcut Değil"
+      }
+    }
+  }
+}

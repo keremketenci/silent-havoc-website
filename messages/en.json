@@ -1,0 +1,258 @@
+{
+  "Home": {
+    "title": "Welcome to Silent Havoc",
+    "about": "Our team was founded in July 2025 and started its activities in September 2025. Silent Havoc plays or provides support as a silent and destructive force, based on the tactics of the Underwater Assault Team (S.A.T) in Turkey and Marine Special Forces (U.S. Navy Special Forces) abroad.",
+    "Donate": {
+      "title": "Support Us",
+      "text": "You can support us and contribute to our projects by donating through the links below."
+    }
+  },
+  "Team": {
+    "Roles": {
+      "Team-Captain": "Team Captain",
+      "Vice-Captain": "Vice Captain",
+      "Member": "Team Member"
+    },
+    "InGame-Roles": {
+      "Entry-Fragger": "Entry Fragger",
+      "Support": "Support",
+      "Sniper": "Sniper",
+      "Lurker": "Lurker",
+      "In-Game-Leader": "In-Game Leader",
+      "Coach": "Coach",
+      "Analyst": "Analyst",
+      "Strategist": "Strategist"
+    },
+    "wanted": "WANTED"
+  },
+  "JoinUs": {
+    "title": "We Are Looking for Teammates",
+    "Job": {
+      "Title": {
+        "member": "Member"
+      },
+      "Time": {
+        "fullTime": "Full-Time",
+        "partTime": "Part-Time",
+        "hybrid": "Hybrid"
+      },
+      "Type": {
+        "freelance": "Freelance",
+        "volunteer": "Volunteer"
+      },
+      "content": "We’re looking for new members who are passionate about airsoft and have a strong sense of teamwork! We’re a disciplined, adrenaline-filled, and fun-loving team. Experience doesn’t matter — what matters is your enthusiasm and respect for the rules. If you’re ready to take your place on the field, join us!"
+    },
+    "Form": {
+      "role": "Role",
+      "subject": "Team Membership Application"
+    },
+    "Button": {
+      "apply": "Apply"
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "Card": {
+      "Content": {
+        "Mail": {
+          "contact": "contact",
+          "domain": "silent-havoc.com"
+        },
+        "phone": "(+90) 549 199 40 87",
+        "address": ""
+      },
+      "Description": {
+        "mail": "E-Mail",
+        "phone": "Phone",
+        "address": "Address"
+      }
+    },
+    "Form": {
+      "label": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "E-Mail",
+        "phone": "Phone",
+        "countryCode": "Country Code",
+        "phoneNumber": "Phone Number",
+        "subject": "Subject",
+        "message": "Message",
+        "equipment": "Equipment",
+        "terms": "privacy policy and terms of service.",
+        "contactMethod": "Preferred Contact Method",
+        "methods": {
+          "email": "E-Mail",
+          "phone": "Phone"
+        }
+      },
+      "input-placeholder": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "example@example.com",
+        "phone": "Phone",
+        "countryCode": "90",
+        "phoneNumber": "555 555 55 55",
+        "subject": "Subject",
+        "message": "Message...",
+        "equipment": "List your equipment here...",
+        "terms": "I accept the privacy policy and terms of service.",
+        "contactMethod": "Select a contact method"
+      },
+      "input-description": {
+        "firstName": "Your First Name",
+        "lastName": "Your Last Name",
+        "email": "Your E-Mail address",
+        "phone": "Your Phone number",
+        "countryCode": "Your Country Code",
+        "phoneNumber": "Your Phone Number",
+        "subject": "The subject of your E-Mail",
+        "message": "Your Message",
+        "equipment": "Equipments you currently have",
+        "terms": "You must accept the privacy policy and terms of service.",
+        "contactMethod": "How would you like us to contact you?"
+      },
+      "Button": {
+        "submit": "SEND",
+        "sending": "Sending..."
+      }
+    }
+  },
+  "Subscribe": {
+    "title": "Subscribe",
+    "description": "Subscribe to our newsletter to stay informed about our game schedule and updates.",
+    "Form": {
+      "label": {
+        "email": "E-Mail"
+      },
+      "input-placeholder": {
+        "email": "example@example.com"
+      },
+      "input-description": {
+        "email": "Your E-Mail address"
+      }
+    },
+    "Button": {
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing"
+    }
+  },
+  "Rules": {
+    "title": "Rules",
+    "Card": {
+      "Title": "Airsoft Rules",
+      "Description": "Please make sure to read the rules before playing"
+    },
+    "Sections": [
+      {
+        "id": "general",
+        "title": "General Rules",
+        "items": [
+          "IN TURKEY, MANY GROUPS HAVE THEIR OWN RULES. HERE, ONLY THE GENERAL RULES ARE LISTED.",
+          "STRICTLY COMPLY WITH THE REPUBLIC OF TURKEY, THE TURKISH FLAG, AND TURKISH LAWS AND SOCIAL NORMS.",
+          "YOU MUST BE AT LEAST 18 YEARS OLD TO PLAY AIRSOFT IN TURKEY.",
+          "IT IS STRICTLY FORBIDDEN TO USE PROFANITY, INSULTS, PROVOCATIVE OR SENSITIVE REMARKS IN THE FIELD OR ON SOCIAL MEDIA PLATFORMS.",
+          "IT IS STRICTLY FORBIDDEN TO SPEAK DISRESPECTFULLY, SWEAR, OR PROVOKE EITHER WITHIN YOUR TEAM OR TOWARDS OPPONENT PLAYERS IN GAME AREAS.",
+          "RELIGION, LANGUAGE, ETHNICITY, POLITICAL VIEWS, AND FOOTBALL ARE STRICTLY PROHIBITED WITHIN THE AIRSOFT COMMUNITY.",
+          "ALL AIRSOFT PLAYERS ARE RESPONSIBLE FOR MAINTAINING THE CLEANLINESS OF THE GAME AREA.",
+          "IN CASE OF ANY NEGATIVE INCIDENT, THE NEAREST LAW ENFORCEMENT AUTHORITIES MUST BE INFORMED.",
+          "WHEN TRANSPORTING TOYS, AN ORANGE TIP MUST BE ATTACHED, AND THEY MUST BE CARRIED IN A WAY THAT IS NOT VISIBLE OR DISPLAYED, SUCH AS INSIDE BAGS OR CASES."
+        ]
+      },
+      {
+        "id": "toy",
+        "title": "Toy Usage Rules",
+        "items": [
+          "AIRSOFT TOYS USE ONLY 6mm PLASTIC BBs.",
+          "THE POWER OF THE TOYS IS MEASURED IN 'FPS' (feet per second).",
+          "PISTOLS (330 FPS): PISTOLS MUST HAVE A MAXIMUM POWER OF 330 FPS AND CANNOT BE USED BELOW 5 METERS.",
+          "RIFLES: (330 FPS CQB) THESE RIFLES ARE DESIGNED FOR CLOSE QUARTERS AND, LIKE PISTOLS, CANNOT BE USED UNDER 5 METERS.",
+          "(400 FPS ASSAULT) THESE LIMITED-POWER RIFLES CANNOT BE USED BELOW 10 METERS.",
+          "(400 FPS LIGHT MACHINE GUN) THESE RIFLES FIRE RAPIDLY AND THEREFORE CANNOT BE USED UNDER 20 METERS. (M60, RPK, M249, etc.)",
+          "GAS-POWERED RIFLES AND THEIR POWER LEVELS ARE ALSO SUBJECT TO THESE RULES.",
+          "SNIPER RIFLES: (550 FPS BOLT ACTION) THESE RIFLES ARE VERY POWERFUL WITH HEAVY BBs AND CANNOT BE USED UNDER 30 METERS.",
+          "(450 FPS SEMI-SNIPER) THESE RIFLES CANNOT BE USED UNDER 20 METERS."
+        ]
+      },
+      {
+        "id": "in-game",
+        "title": "In-Game Rules",
+        "items": [
+          "IF TWO PLAYERS ENCOUNTER EACH OTHER AND BOTH CLAIM TO HAVE HIT THE OTHER, BOTH PLAYERS MUST LEAVE THE GAME.",
+          "PLAYERS MUST NOT LEAVE THE DESIGNATED PLAY AREA TO GAIN AN ADVANTAGE OVER OPPONENTS. (IN SHORT, LEAVING THE MAP IS FORBIDDEN).",
+          "IT IS FORBIDDEN TO REMOVE YOUR PROTECTIVE BALLISTIC GOGGLES UNDER ANY CIRCUMSTANCES DURING THE GAME.",
+          "AFTER BEING HIT, EVERY PLAYER MUST RAISE THEIR HAND AND VERBALLY CALL OUT 'HIT' WHEN TURNING CORNERS TO PREVENT ACCIDENTS.",
+          "AFTER BEING HIT, EVERY PLAYER MUST WEAR A BRIGHT, FLUORESCENT, OR NON-CAMOUFLAGED COLORED CLOTH TO INDICATE ELIMINATION.",
+          "IT IS STRICTLY FORBIDDEN TO FIRE TOYS INSIDE THE SAFE ZONE.",
+          "IT IS FORBIDDEN TO INTERCEPT OR LISTEN TO THE OPPOSING TEAM'S RADIO FREQUENCY DURING THE GAME.",
+          "A PLAYER WHO HAS BEEN HIT CANNOT SPEAK, GIVE TACTICS, OR REVEAL ENEMY POSITIONS.",
+          "IN CASE OF A SILENT KILL (FAKE KNIFE), THE ELIMINATED PLAYER MUST LEAVE THE FIELD QUIETLY WITHOUT AFFECTING THE GAME FLOW.",
+          "IF YOU BELIEVE A BB HAS HIT YOU, YOU MUST LEAVE THE GAME. EVEN IF YOU ARE UNSURE, YOU SHOULD STILL LEAVE.",
+          "DO NOT USE ANY FLAMMABLE OR EXPLOSIVE MATERIALS IN FOREST AREAS. SMOKING IS STRICTLY FORBIDDEN DURING THE GAME."
+        ]
+      }
+    ]
+  },
+  "Navbar": {
+    "Link": {
+      "home": "Home",
+      "team": "Our Team",
+      "joinUs": "Join Us",
+      "contact": "Contact",
+      "rules": "Rules",
+      "gameServers": "Our Game Servers",
+      "cs2server": "Counter-Strike 2"
+    }
+  },
+  "Footer": {
+    "Link": {
+      "home": "Home",
+      "team": "Our Team",
+      "joinUs": "Join Us",
+      "contact": "Contact",
+      "rules": "Rules"
+    },
+    "Copyright": {
+      "copyright": "Copyright",
+      "allRightsReserved": "All rights reserved",
+      "year": "2024"
+    },
+    "Domain": {
+      "text": "silent-havoc.com",
+      "link": "https://silent-havoc.com"
+    },
+    "studio": "Silent Havoc",
+    "designBy": "Designed By",
+    "developedBy": "Developed By"
+  },
+  "Toast": {
+    "CardTeam": {
+      "Email": {
+        "Copy": {
+          "success": "E-Mail Address Copied",
+          "failed": "E-Mail Address Could Not Be Copied. Please Try Again",
+          "nolink": "No Link Available",
+          "noemail": "No E-Mail Address Available"
+        }
+      }
+    },
+    "ContactForm": {
+      "Email": {
+        "success": "Your message has been sent successfully",
+        "failed": "Your message could not be sent. Please try again later"
+      }
+    },
+    "Subscribe": {
+      "Email": {
+        "success": "Successfully Subscribed",
+        "failed": "Subscription Failed. Please try again later"
+      }
+    },
+    "GameServers": {
+      "ServerIp": {
+        "success": "Server IP Copied",
+        "failed": "Server IP Could Not Be Copied. Please Try Again",
+        "noip": "No IP Address Available"
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+
+  /* theme */
+  --background: rgb(0, 0, 0);
+  --foreground: rgb(245, 245, 245);
+
+  /* Card & Popover */
+  --card: rgb(10, 10, 10);
+  --card-foreground: var(--foreground);
+  --popover: rgb(28, 28, 32);
+  --popover-foreground: var(--foreground);
+
+  /* Colors */
+  --primary: rgb(35, 35, 45);
+  --primary-foreground: rgb(245, 245, 245);
+
+  --secondary: rgb(55, 55, 65);
+  --secondary-foreground: var(--foreground);
+
+  --accent: rgb(255, 80, 0);
+  --accent-foreground: rgb(245, 245, 245);
+
+  --highlight: rgb(0, 200, 0);
+  --highlight-dark: rgb(0, 150, 0);
+
+  --destructive: rgb(181, 61, 37);
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: rgb(119, 119, 128);
+
+  /* Muted / helper */
+  --muted-foreground: rgb(172, 171, 183);
+
+  /* Chart */
+  --chart-1: rgb(228, 108, 24);
+  --chart-2: rgb(61, 163, 227);
+  --chart-3: rgb(51, 102, 189);
+  --chart-4: rgb(194, 183, 32);
+  --chart-5: rgb(207, 168, 42);
+
+  /* Sidebar */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  /* Navbar */
+  --navbar: var(--card);
+  --navbar-foreground: var(--foreground);
+  --navbar-primary: var(--primary);
+  --navbar-primary-foreground: var(--primary-foreground);
+  --navbar-accent: var(--accent);
+  --navbar-accent-foreground: var(--accent-foreground);
+  --navbar-border: var(--border);
+  --navbar-ring: var(--ring);
+
+  /* Font fallbacks for theme usage */
+  --font-geist-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Courier New", monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-highlight: var(--highlight);
+
+  --color-input: var(--input);
+  --color-input-border: var(--border);
+  --color-input-text: var(--foreground);
+  --color-input-placeholder: var(--muted-foreground);
+  --color-input-focus-ring: var(--ring);
+  --color-input-invalid-ring: var(--destructive);
+  --color-input-invalid-border: var(--destructive);
+
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-normal-bg: var(--popover);
+  --color-normal-text: var(--popover-foreground);
+  --color-normal-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-dark);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+@keyframes eyePulse {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.eyePulse {
+  animation: eyePulse 5s infinite alternate;
+  transition: opacity 0.5s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.translate-y-101 {
+  transform: translateY(101%);
+}
