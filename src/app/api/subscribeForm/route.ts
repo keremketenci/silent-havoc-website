@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     // 1) Mail to site owner
     await transporter.sendMail({
       from: `"Subscribe Form" <${SMTP_USER}>`,
-      to: "keremketenci0@gmail.com",
+      to: "silent.havoc.istanbul@gmail.com",
       subject: "New Subscription",
       text: `New subscriber: ${email}`,
       html: `<p>New subscriber: ${email}</p>`,

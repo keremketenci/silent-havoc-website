@@ -80,7 +80,7 @@ export function JoinUsForm({ prefillSubject }: { prefillSubject?: string }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           sender: { name: `${data.name} ${data.surname}`, address: data.email },
-          recipients: [{ address: "keremketenci0@gmail.com" }],
+          recipients: [{ address: "silent.havoc.istanbul@gmail.com" }],
           subject: data.subject,
           message: `
             Name: ${data.name} ${data.surname}
