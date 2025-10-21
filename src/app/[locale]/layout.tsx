@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   title: "SILENT HAVOC",
   description: "Airsoft Organization",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
 };
 
@@ -67,7 +67,6 @@ export default async function LocaleLayout({
             </ClickSpark>
           </header>
           <main className="pt-16 container mx-auto">
-            <LoadingWrapper>{children}</LoadingWrapper>
             <CursorWrapper />
             <ClickSpark
               sparkColor="#fff"
@@ -79,7 +78,7 @@ export default async function LocaleLayout({
               <div>
                 <LogoBackground />
               </div>
-              {children}
+              <LoadingWrapper>{children}</LoadingWrapper>
               <div className="pt-12">
                 <Footer language={locale as "en" | "tr"} />
               </div>
