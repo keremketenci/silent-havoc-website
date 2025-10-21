@@ -11,6 +11,8 @@ export function CT() {
         onHover="speedUp"
         spinDuration={20}
         className="custom-class select-none md:cursor-none"
+        logoSrc="/icons/silenthavoc/logo2.png"
+        logoSize={100}
       />
     </div>
   );
