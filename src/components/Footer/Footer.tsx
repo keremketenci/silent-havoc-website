@@ -113,7 +113,8 @@ export function Footer({ language }: { language: 'en' | 'tr' }) {
         <FooterSignature language={language} />
         <div className="flex flex-wrap justify-center mb-0 lg:mb-2 gap-y-2 sm:gap-x-0 items-center">
           <ButtonSocials
-            link=""
+            link="https://www.instagram.com/silent_havoc_istanbul"
+            alt="instagram.com/silent_havoc_istanbul"
             icon="instagram"
             iconClass="w-8"
             isActive={true}

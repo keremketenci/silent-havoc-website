@@ -1,7 +1,7 @@
 "use client";
 
 // translations
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 import React from "react";
 
@@ -21,6 +21,7 @@ interface ButtonSocialsProps {
   icon: string;
   iconClass?: string;
   isActive: boolean;
+  alt?: string;
 }
 
 export const ButtonSocials: React.FC<ButtonSocialsProps> = ({
@@ -28,45 +29,45 @@ export const ButtonSocials: React.FC<ButtonSocialsProps> = ({
   icon,
   iconClass,
   isActive,
+  alt,
 }) => {
   const t2 = useTranslations("Toast");
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(link);
-      if (link.includes('@')) {
-        toast.success(`${t2('CardTeam.Email.Copy.success')}`);
-      }
-      else if (link.includes('#')) {
-        toast.info(`${t2('CardTeam.Email.Copy.nolink')}`);
+      if (link.includes("@")) {
+        toast.success(`${t2("CardTeam.Email.Copy.success")}`);
+      } else if (link.includes("#")) {
+        toast.info(`${t2("CardTeam.Email.Copy.nolink")}`);
       }
     } catch (err) {
-      toast.error(`${t2('CardTeam.Email.Copy.noemail')}`);
+      toast.error(`${t2("CardTeam.Email.Copy.noemail")}`);
     }
   };
 
-  const buttonClassName = `${isActive ? styles["ButtonSocials"] : ""} ${styles[`ButtonSocials-${icon}`]}`;
+  const buttonClassName = `${isActive ? styles["ButtonSocials"] : ""} ${
+    styles[`ButtonSocials-${icon}`]
+  }`;
 
   return (
     <Button
       variant="ghost"
       className={`${buttonClassName} cursor-pointer md:cursor-none cursor-target`}
       title={link}
-      onClick={icon === "mail2" ? handleCopy : undefined}
+      onClick={() => {
+        if (icon === "mail2") {
+          handleCopy();
+        } else {
+          window.open(link, "_blank", "noopener,noreferrer");
+        }
+      }}
     >
-      {icon === "mail2" ? (
-        <Icon
-          name={icon}
-          className={`md:cursor-none ${iconClass} ${styles["ButtonSocials-icon"]}`}
-        />
-      ) : (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <Icon
-            name={icon}
-            className={`md:cursor-none ${iconClass} ${styles["ButtonSocials-icon"]}`}
-          />
-        </a>
-      )}
+      <Icon
+        name={icon}
+        className={`md:cursor-none ${iconClass} ${styles["ButtonSocials-icon"]}`}
+        alt={alt}
+      />
     </Button>
   );
 };

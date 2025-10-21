@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 interface IconProps {
   name: string;
   className?: string;
+  alt?: string;
 }
 
 interface IconData {
@@ -13,7 +14,7 @@ interface IconData {
   path: string;
 }
 
-export const Icon: React.FC<IconProps> = ({ name, className }) => {
+export const Icon: React.FC<IconProps> = ({ name, className, alt }) => {
   const [iconPath, setIconPath] = useState<string>("/icons/loading.svg");
 
   useEffect(() => {
@@ -44,7 +45,7 @@ export const Icon: React.FC<IconProps> = ({ name, className }) => {
     <img src={iconPath} alt={name} className={className} />
   ) : (
     <div className="flex justify-center">
-      <img src={iconPath} className={"w-8"} />
+      <img src={iconPath} className={"w-8"} alt={alt} />
     </div>
   );
 };
