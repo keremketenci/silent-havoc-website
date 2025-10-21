@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { loading } from "@/hooks/loading";
+import { useLoading } from "@/hooks/useLoading";
 import {Loading} from "./Loading";
 
 export default function AppLoaderWrapper({ children }: { children: React.ReactNode }) {
@@ -12,7 +12,7 @@ export default function AppLoaderWrapper({ children }: { children: React.ReactNo
     return () => clearTimeout(fakeLoad);
   }, []);
 
-  const visible = loading(isReady, 1000);
+  const visible = useLoading(isReady, 1000);
 
   return (
     <>
