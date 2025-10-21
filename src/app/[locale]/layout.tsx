@@ -13,6 +13,7 @@ import ClickSpark from "@/components/ClickSpark";
 import { Toaster } from "@/components/shadcn/ui/sonner";
 import LogoBackground from "@/components/LogoBackground";
 import Noise from "@/components/Noise";
+import LoadingWrapper from "@/components/Loading/LoadingWrapper";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
@@ -66,6 +67,7 @@ export default async function LocaleLayout({
             </ClickSpark>
           </header>
           <main className="pt-16 container mx-auto">
+            <LoadingWrapper>{children}</LoadingWrapper>
             <CursorWrapper />
             <ClickSpark
               sparkColor="#fff"
