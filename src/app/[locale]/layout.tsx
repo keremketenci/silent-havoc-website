@@ -1,6 +1,6 @@
 import "../globals.css";
 
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 
 // translations
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -30,13 +30,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "SILENT HAVOC",
-  description: "Airsoft Organization",
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
+// export const metadata: Metadata = {
+//   title: "SILENT HAVOC",
+//   description: "Airsoft Organization",
+//   icons: {
+//     icon: "/favicon.svg",
+//   },
+// };
+
+export async function generateMetadata({
+  params,
+}: LayoutProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    return {
+      title: "SILENT HAVOC",
+      description: "Airsoft Organization",
+      icons: { icon: "/favicon.svg" },
+    };
+  }
+
+  return locale === "tr"
+    ? {
+        title: "SILENT HAVOC",
+        description: "Hava Tüfekleri Organizasyonu",
+        icons: { icon: "/favicon.svg" },
+        keywords: ["airsoft", "organizasyon", "silent havoc"],
+        authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
+      }
+    : {
+        title: "SILENT HAVOC",
+        description: "Airsoft Organization",
+        icons: { icon: "/favicon.svg" },
+        keywords: ["airsoft", "organization", "silent havoc"],
+        authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
+      };
+}
 
 export default async function LocaleLayout({
   children,
