@@ -13,7 +13,7 @@ export function Home() {
     <div>
       <div className="grid grid-row-3 md:grid md:grid-cols-3 min-h-screen md:items-center md:pb-12">
         {/* Text Section */}
-        <div className="text-center">
+        <div className="text-center px-4 pb-2 lg:p-0">
           <p className="text-4xl font-bold text-accent pb-6">{`${t(
             "title"
           )}!`}</p>
