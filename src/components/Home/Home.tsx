@@ -29,9 +29,9 @@ export function Home() {
       <div>
         <InstagramFeed/>
       </div>
-      <div className="my-48">
+      {/* <div className="my-48">
         <FM />
-      </div>
+      </div> */}
     </div>
   );
 }
