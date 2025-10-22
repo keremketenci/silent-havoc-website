@@ -1,5 +1,7 @@
 import "../globals.css";
 
+import { Analytics } from '@vercel/analytics/next';
+
 // translations
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -79,6 +81,7 @@ export default async function LocaleLayout({
                 <LogoBackground />
               </div>
               <LoadingWrapper>{children}</LoadingWrapper>
+              <Analytics />
               <div className="pt-12">
                 <Footer language={locale as "en" | "tr"} />
               </div>
