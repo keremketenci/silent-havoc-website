@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <section>
       {/* Home Section */}
-      <section className="" id="Home">
+      <section id="Home">
         <Home />
       </section>
     </section>
