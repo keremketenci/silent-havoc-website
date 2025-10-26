@@ -16,7 +16,7 @@ export const Loading: React.FC<LoadingProps> = ({ text }) => {
       <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white/90 dark:bg-black/75">
         {/* <div className="w-12 h-12 border-4 border-t-transparent rounded-full animate-spin" /> */}
         <Image
-          src="/icons/silenthavoc/logo2.png"
+          src="/icons/silenthavoc/logo-colored.png"
           alt="Logo"
           width="400"
           height="400"
