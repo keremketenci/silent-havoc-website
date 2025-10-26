@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import TargetCursor from "@/components/TargetCursor/TargetCursor";
@@ -16,7 +16,8 @@ export const CursorWrapper = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // sadece md ve üstü render et
+  // Render only on md and above
+
   if (!isMdUp) return null;
 
   return <TargetCursor spinDuration={4} hideDefaultCursor={true} />;

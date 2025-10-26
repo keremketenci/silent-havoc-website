@@ -4,8 +4,8 @@ import React from "react";
 import styles from "@/components/ui/button/ButtonNav.module.css";
 
 interface ButtonNavProps {
-  checked: boolean;              // dışarıdan gelen state
-  onChange: () => void;          // toggle için callback
+  checked: boolean; // state coming from outside
+  onChange: () => void; // callback to toggle
 }
 
 export const ButtonNav: React.FC<ButtonNavProps> = ({ checked, onChange }) => {
@@ -14,8 +14,8 @@ export const ButtonNav: React.FC<ButtonNavProps> = ({ checked, onChange }) => {
       <input
         type="checkbox"
         id="ButtonNav"
-        checked={checked}          // controlled
-        onChange={onChange}        // state Navbar’da değişecek
+        checked={checked} // controlled
+        onChange={onChange} // state will change in Navbar
       />
       <span></span>
       <span></span>

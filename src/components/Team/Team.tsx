@@ -28,13 +28,13 @@ export default function Team() {
           ${
             isLeader
               ? `
-              sm:col-span-2          /* 2 sütun düzeninde lider tam satır */
-              lg:col-span-1 lg:col-start-2 /* 3 sütunda ortada */
-              lg:row-start-1         /* aynı satırda kal */
-              lg:-translate-y-4      /* yukarı kaldır */
+              sm:col-span-2          /* in 2-column layout, leader spans full row */
+              lg:col-span-1 lg:col-start-2 /* centered in 3-column layout */
+              lg:row-start-1         /* stay on the same row */
+              lg:-translate-y-4      /* lift up */
             `
               : `
-              lg:row-start-1         /* 3 sütunda aynı satırda tut */
+              lg:row-start-1         /* in 3 columns, keep on the same row */
             `
           }
         `}

@@ -198,7 +198,8 @@ export function Navbar({ className }: NavbarProps) {
                                     toast(t2("GameServers.ServerIp.failed"));
                                   else toast(t2("GameServers.ServerIp.noip"));
 
-                                  // Navbar kapanışı
+                                  // Close navbar
+
                                   setIsNavbarOpen(false);
                                   setIsButtonNavChecked(false);
                                   setOpenSubmenu(null);

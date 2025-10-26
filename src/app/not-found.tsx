@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import FuzzyText from '@/components/FuzzyText';
+import FuzzyText from "@/components/FuzzyText";
 
 export default function NotFound() {
   useEffect(() => {
-    // Body ve HTML stilini siyah yap
+    // Set Body and HTML styles to black
     const originalBg = document.body.style.backgroundColor;
     const originalColor = document.body.style.color;
 
@@ -16,7 +16,7 @@ export default function NotFound() {
     document.body.style.height = "100%";
 
     return () => {
-      // Sayfadan çıkınca orijinal stil geri gelsin
+      // Restore original styles when leaving the page
       document.body.style.backgroundColor = originalBg;
       document.body.style.color = originalColor;
       document.body.style.margin = "";
@@ -37,11 +37,7 @@ export default function NotFound() {
         backgroundColor: "black",
       }}
     >
-      <FuzzyText
-        baseIntensity={0.2}
-        hoverIntensity={1.0}
-        enableHover={true}
-      >
+      <FuzzyText baseIntensity={0.2} hoverIntensity={1.0} enableHover={true}>
         404
       </FuzzyText>
     </div>

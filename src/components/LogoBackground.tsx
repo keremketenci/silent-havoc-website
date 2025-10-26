@@ -7,7 +7,7 @@ export default function LogoBackground() {
   const [size, setSize] = useState(400);
 
   useEffect(() => {
-    // Ekran boyutuna göre logo boyunu ayarlamak
+    // Adjust logo size based on screen dimensions
     const updateSize = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
