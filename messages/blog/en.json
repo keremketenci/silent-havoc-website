@@ -1,0 +1,77 @@
+{
+  "Index": {
+    "title": "Silent Havoc Blog",
+    "description": "Short articles and guides about airsoft"
+  },
+  "Posts": {
+    "what-is-airsoft": {
+      "title": "What Is Airsoft?",
+      "description": "An introduction to airsoft, game types and essential safety",
+      "content": {
+        "intro": "Airsoft is a team sport played with replica guns that resemble real firearms and fire 6mm plastic BBs. It's enjoyed by casual players and milsim (military simulation) groups alike. The objective varies by scenario: capture flags, complete objectives or eliminate the opposing team. Games run with rules, safety protocols and team tactics.",
+        "sections": [
+          {"h2": "History & Development", "p": ["Airsoft began in 1970s Japan when model gun technologies were adapted for recreational use. It spread globally, growing into organized clubs, fields and tournaments."]},
+          {"h2": "Game Types", "list": ["Casual pickup games","CQB (Close Quarters Battle) — indoor/close-range engagements","Milsim — realistic military simulations","Scenario-based missions"]},
+          {"h2": "Safety & Rules", "p": ["Eye protection is mandatory. Face masks, gloves and appropriate clothing are strongly recommended. Keep safeties on in safe zones; do not dry fire. Each field sets its own FPS limits and safety protocols."]},
+          {"h2": "Conclusion", "p": ["Airsoft promotes tactical thinking, communication and teamwork. Beginners should consider introductory sessions at their local fields."]}
+        ]
+      }
+    },
+    "airsoft-rifles-guide": {
+      "title": "Airsoft Rifles Guide",
+      "description": "Overview of AEG, GBB, Spring and HPA systems and maintenance tips",
+      "content": {
+        "intro": "Airsoft rifles differ by operating mechanism, each offering a distinct experience. Below are common types and practical tips.",
+        "sections": [
+          {"h2": "AEG (Automatic Electric Gun)", "p": ["Battery-powered electric systems are popular for durability and moddability. Internal tuning (gearbox, piston, hop-up) impacts performance."]},
+          {"h2": "GBB (Gas Blow Back)", "p": ["Gas-driven systems provide realistic recoil and feel. Consider cold weather performance, gas type and maintenance needs."]},
+          {"h2": "HPA (High Pressure Air)", "p": ["HPA offers high performance and adjustable FPS, but requires tanks/lines and tends to be costlier."]},
+          {"h2": "Spring (Manual)", "p": ["Simple, reliable and low-maintenance. Typically single-shot and budget-friendly; useful for training or backup."]},
+          {"h2": "Maintenance Tips", "list": ["Regular cleaning and lubrication","Use high-quality BBs","Match batteries/gas to specs","Chronograph regularly and follow field rules"]},
+          {"h2": "Conclusion", "p": ["Choose based on playstyle, maintenance comfort and budget. AEGs are a solid start; GBB/HPA for realism."]}
+        ]
+      }
+    },
+    "airsoft-safety-rules": {
+      "title": "Airsoft Safety Rules",
+      "description": "Eye/face protection, FPS limits and field rules",
+      "content": {
+        "intro": "With proper precautions, airsoft is safe and fun. These basics protect you and your fellow players.",
+        "sections": [
+          {"h2": "Eye & Face Protection", "list": ["Use EN166+ rated goggles or a full-face mask","Never remove eye protection on the field; only in safe zones"]},
+          {"h2": "Engagement Distance & FPS", "list": ["Chronograph your replica before games","Avoid headshots at close range; aim for torso/legs"]},
+          {"h2": "Communication & Sportsmanship", "list": ["Follow marshal instructions","Call your hits loudly and raise your hand"]},
+          {"h2": "Field Rules", "list": ["Listen carefully to the briefing","Respect no-go zones and safe areas"]},
+          {"h2": "Conclusion", "p": ["Following basics makes airsoft safer and more enjoyable for everyone."]}
+        ]
+      }
+    },
+    "airsoft-gear-guide": {
+      "title": "Airsoft Gear Guide",
+      "description": "Protective equipment, load bearing, gloves and clothing",
+      "content": {
+        "intro": "Choosing the right gear directly impacts safety and performance. Here are essentials and what to consider.",
+        "sections": [
+          {"h2": "Eye Protection & Masks", "list": ["Use EN166+ certified goggles","Add mesh or polycarbonate lower face protection"]},
+          {"h2": "Gloves & Pads", "list": ["Cut-resistant gloves improve safety and comfort","Knee/elbow pads reduce injury risk in falls"]},
+          {"h2": "Vests & Load-Bearing", "list": ["Choose chest rigs or plate carriers by playstyle","Use modular pouches for mags and accessories"]},
+          {"h2": "Footwear & Apparel", "list": ["Ankle-supporting outdoor boots recommended","Favor breathable, durable fabrics"]},
+          {"h2": "Conclusion", "p": ["Pick gear that fits your budget and playstyle for better comfort and efficiency. Safety first, performance second!"]}
+        ]
+      }
+    },
+    "airsoft-game-tactics": {
+      "title": "Airsoft Game Tactics",
+      "description": "Team coordination, movement and communication basics",
+      "content": {
+        "intro": "Effective play relies on team coordination, positioning and clear comms.",
+        "sections": [
+          {"h2": "Communication", "list": ["Use short, clear radio calls","Employ eye contact and hand signals to stay silent"]},
+          {"h2": "Movement & Positioning", "list": ["Advance close to cover; avoid dashing in the open","Move in pairs and watch each other's angles"]},
+          {"h2": "Area Control", "list": ["Prioritize key targets and apply pressure","Deny enemy escape routes"]},
+          {"h2": "Conclusion", "p": ["Simple, disciplined habits dramatically improve team effectiveness. Practice and feedback are essential."]}
+        ]
+      }
+    }
+  }
+}

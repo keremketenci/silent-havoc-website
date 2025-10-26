@@ -1,0 +1,100 @@
+{
+  "Index": {
+    "title": "Silent Havoc Blogu",
+    "description": "Airsoft hakkında kısa makaleler ve rehberler"
+  },
+  "Posts": {
+    "what-is-airsoft": {
+      "title": "Airsoft Nedir?",
+      "description": "Airsoft'a giriş, oyun türleri ve temel güvenlik",
+      "content": {
+        "intro": "Airsoft, gerçek silah görünümlü replika silahlarla oynanan, plastik BB'lerin kullanıldığı bir takım sporudur. Hem amatör oyuncular hem de daha ciddi milsim (military simulation) toplulukları tarafından tercih edilir. Oyunun amacı, senaryoya göre hedefleri gerçekleştirmek, bayrak almak veya rakip takımı ele geçirmektir. Airsoft oyunları kurallar, güvenlik protokolleri ve takım taktikleri çerçevesinde oynanır.",
+        "sections": [
+          {
+            "h2": "Tarihçe ve Gelişim",
+            "p": [
+              "Airsoft, 1970'lerde Japonya'da model silah üreticileri tarafından geliştirilen replika teknolojilerinin oyun amaçlı kullanılmasıyla başladı. Zamanla Batı'da da popülerlik kazandı ve organize spor kulüpleri, sahalar ve turnuvalar ortaya çıktı."
+            ]
+          },
+          {
+            "h2": "Oyun Türleri",
+            "list": [
+              "Casual (günlük) oyunlar",
+              "CQB (Close Quarters Battle) – kapalı alan mücadeleleri",
+              "Milsim – gerçekçi askeri simülasyonlar",
+              "Senaryo tabanlı görevler"
+            ]
+          },
+          {
+            "h2": "Güvenlik ve Kurallar",
+            "p": [
+              "Oyuncuların güvenliği için koruyucu gözlük takmak zorunludur. Yüz maskesi, eldiven ve uygun giysi de önemlidir. Sahaya girerken silah emniyete alınmış olmalı; boş atış (dry fire) yapılmamalıdır. Her saha kendi FPS sınırlarını ve güvenlik protokollerini belirler."
+            ]
+          },
+          {
+            "h2": "Sonuç",
+            "p": [
+              "Airsoft, taktik düşünmeyi, iletişimi ve takım çalışmasını teşvik eden, geniş bir topluluğa sahip bir hobidir. Yeni başlayanlar için yerel sahalardaki eğitim programlarına katılmak iyi bir başlangıçtır."
+            ]
+          }
+        ]
+      }
+    },
+    "airsoft-rifles-guide": {
+      "title": "Airsoft Tüfek Rehberi",
+      "description": "AEG, GBB, Spring ve HPA sistemlerine genel bakış ve bakım ipuçları",
+      "content": {
+        "intro": "Airsoft tüfekleri farklı çalışma prensiplerine göre ayrılır ve her birinin kullanıcıya sunduğu deneyim farklıdır. Aşağıda en yaygın türlerin özellikleri ve kullanım ipuçları yer almaktadır.",
+        "sections": [
+          {"h2": "AEG (Automatic Electric Gun)", "p": ["Elektrikli motor ve batarya ile çalışan AEG'ler, dayanıklılık ve modifiye edilebilirlik açısından popülerdir. İç parçaları (gearbox, piston, hop-up) üzerinde yapılan ayarlamalar performansı etkiler."]},
+          {"h2": "GBB (Gas Blow Back)", "p": ["Gaz ile çalışan GBB sistemler, gerçekçi geri tepme hissi ve daha doğal bir atış deneyimi sunar. Ancak soğuk hava performansı, gaz tipi ve bakım gereksinimleri göz önünde bulundurulmalıdır."]},
+          {"h2": "HPA (High Pressure Air)", "p": ["HPA sistemleri yüksek performans ve ayarlanabilir FPS sağlar. Genellikle daha pahalıdır ve özel tank/line gerektirir."]},
+          {"h2": "Spring (Elle Kurmalı)", "p": ["Basit, güvenilir ve bakımı kolaydır. Genellikle tek atışlıdır ve maliyeti düşüktür; eğitim amaçlı ya da yedek silah olarak tercih edilir."]},
+          {"h2": "Bakım ve Öneriler", "list": ["Düzenli temizlik ve yağlama","Uygun BB seçimi (temiz ve yuvarlak BB'ler tercih edin)","Batarya ve gaz uyumluluğuna dikkat","Kronograf ile FPS ölçümü ve saha kurallarına uyum"]},
+          {"h2": "Sonuç", "p": ["Hangi tüfeğin size uygun olduğu oyun tarzınıza, bakım kabiliyetinize ve bütçenize bağlıdır. Yeni başlayanlar için AEG genellikle iyi bir başlangıç noktasıdır; daha gerçekçi bir deneyim isteyenler GBB veya HPA'ya yönelebilir."]}
+        ]
+      }
+    },
+    "airsoft-safety-rules": {
+      "title": "Airsoft Güvenlik Kuralları",
+      "description": "Göz/yüz koruması, FPS limitleri ve saha kuralları",
+      "content": {
+        "intro": "Airsoft, doğru güvenlik önlemleri uygulandığında güvenli ve eğlenceli bir spordur. Aşağıdaki kurallar, hem sizin hem de diğer oyuncuların güvenliğini sağlamak için önemlidir.",
+        "sections": [
+          {"h2": "Göz ve Yüz Koruması", "list": ["EN166+ sertifikalı gözlük veya tam yüz maskesi kullanın.","Oyun alanında gözlüğü çıkarmayın; güvenli bölgede çıkarın."]},
+          {"h2": "Atış Mesafesi ve FPS", "list": ["Silahınızın FPS değerini chrono ile kontrol edin.","Yakın mesafede göğüs ve ayaklara nişan alın; kafa atışından kaçının."]},
+          {"h2": "İletişim ve Sporculuk", "list": ["Hakem talimatlarına uyun.","Hit aldığınızda yüksek sesle haber verin ve elinizi kaldırın."]},
+          {"h2": "Saha Kuralları", "list": ["Oyun başlamadan önce saha brifingini dikkatle dinleyin.","Yasaklı bölgeler ve güvenli alanlara saygı gösterin."]},
+          {"h2": "Sonuç", "p": ["Temel güvenlik kurallarına uymak, airsoft deneyimini herkes için daha güvenli ve keyifli hale getirir."]}
+        ]
+      }
+    },
+    "airsoft-gear-guide": {
+      "title": "Airsoft Ekipman Rehberi",
+      "description": "Koruyucu ekipmanlar, taşıma çözümleri, eldiven ve kıyafet",
+      "content": {
+        "intro": "Airsoft'ta doğru ekipman seçimi, hem güvenliği hem de performansı doğrudan etkiler. Aşağıda en temel ekipman gruplarını ve seçerken dikkat edilmesi gereken noktaları bulabilirsiniz.",
+        "sections": [
+          {"h2": "Gözlük ve Maske", "list": ["EN166+ sertifikalı gözlük tercih edin.","Alt yüz koruması için mesh veya polikarbon maske kullanın."]},
+          {"h2": "Eldiven ve Diz/Dirsek Koruyucuları", "list": ["Kesilmeye dayanıklı eldivenler konfor ve güvenlik sağlar.","Diz/dirsek koruyucuları düşmelerde sakatlanma riskini azaltır."]},
+          {"h2": "Yelek ve Taşıma Sistemleri", "list": ["Chest rig veya plate carrier, oyun tarzına göre seçilebilir.","Modüler cepler ile şarjör ve aksesuarlar düzenli taşınır."]},
+          {"h2": "Ayakkabı ve Giysi", "list": ["Bileği destekleyen outdoor botlar önerilir.","Nefes alan, dayanıklı kumaşlar tercih edin."]},
+          {"h2": "Sonuç", "p": ["Bütçenize ve oyun tarzınıza uygun ekipman seçmek, sahadaki konforunuzu ve verimliliğinizi artırır. Önce güvenlik, sonra performans!"]}
+        ]
+      }
+    },
+    "airsoft-game-tactics": {
+      "title": "Airsoft Oyun Taktikleri",
+      "description": "Takım koordinasyonu, hareket ve iletişim temelleri",
+      "content": {
+        "intro": "Etkili bir airsoft oyunu için takım koordinasyonu, doğru pozisyon alma ve net iletişim büyük önem taşır.",
+        "sections": [
+          {"h2": "İletişim", "list": ["Kısa ve net telsiz mesajları kullanın.","Göz teması ve el işaretleriyle sessiz iletişim kurun."]},
+          {"h2": "Hareket ve Pozisyon Alma", "list": ["Kapağa yakın ilerleyin; açık alanlarda koşmayın.","Çiftler halinde hareket ederek birbirinizi kollayın."]},
+          {"h2": "Alan Kontrolü", "list": ["Öncelikli hedefleri belirleyin ve baskı kurun.","Düşmanın kaçış rotalarını kısıtlayın."]},
+          {"h2": "Sonuç", "p": ["Basit ama disiplinli uygulamalar, takımınızın etkinliğini ciddi ölçüde artırır. Sürekli pratik ve geri bildirim şarttır."]}
+        ]
+      }
+    }
+  }
+}

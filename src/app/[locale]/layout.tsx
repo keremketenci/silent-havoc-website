@@ -78,8 +78,9 @@ export default async function LocaleLayout({
     notFound();
   }
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased min-h-screen`} // bg-pattern
       >
         <div className="fixed inset-0 -z-99">
