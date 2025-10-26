@@ -199,8 +199,7 @@
       "joinUs": "Join Us",
       "contact": "Contact",
       "rules": "Rules",
-      "gameServers": "Our Game Servers",
-      "cs2server": "Counter-Strike 2"
+      "blog": "Blog"
     }
   },
   "Footer": {
@@ -209,7 +208,8 @@
       "team": "Our Team",
       "joinUs": "Join Us",
       "contact": "Contact",
-      "rules": "Rules"
+      "rules": "Rules",
+      "blog": "Blog"
     },
     "Copyright": {
       "copyright": "Copyright",

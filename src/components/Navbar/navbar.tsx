@@ -47,7 +47,7 @@ export function Navbar({ className }: NavbarProps) {
     { label: t("Link.joinUs"), path: "/join-us#JoinUs" },
     { label: t("Link.contact"), path: "/contact#Contact" },
     { label: t("Link.rules"), path: "/rules#Rules" },
-    // Örnek dropdown
+    { label: t("Link.blog"), path: "/blog" },
     // { label: t('Link.gameServers'), path: '#', children: [{ label: t('Link.cs2server'), path: '#CS2Server', serverIp: 'connect server-ip' }] }
   ];
 

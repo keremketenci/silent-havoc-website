@@ -6,9 +6,10 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale || "tr";
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale || "tr";
   const t = await getTranslations({ locale, namespace: "Blog" });
   const url = `/${locale}/blog`;
   const title = t("Index.title");
@@ -24,9 +25,10 @@ export async function generateMetadata({
 export default async function BlogIndex({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale || "tr";
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale || "tr";
   const base = `/${locale}/blog`;
   const t = await getTranslations({ locale, namespace: "Blog" });
 

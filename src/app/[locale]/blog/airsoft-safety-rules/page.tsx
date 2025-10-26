@@ -4,9 +4,10 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale || "tr";
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale || "tr";
   const t = await getTranslations({ locale, namespace: "Blog" });
   const url = `/${locale}/blog/airsoft-safety-rules`;
   const rawTitle = t("Posts.airsoft-safety-rules.title");
@@ -23,12 +24,11 @@ export async function generateMetadata({
 export default async function AirsoftGuvenlikKurallari({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const t = await getTranslations({
-    locale: params?.locale || "tr",
-    namespace: "Blog",
-  });
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale || "tr";
+  const t = await getTranslations({ locale, namespace: "Blog" });
   type Section = { h2?: string; p?: string[]; list?: string[] };
   type Content = { intro?: string; sections?: Section[] };
   const content = (t.raw(`Posts.airsoft-safety-rules.content`) as unknown) as Content;

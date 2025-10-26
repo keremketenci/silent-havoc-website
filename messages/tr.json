@@ -199,8 +199,7 @@
       "joinUs": "Bize Katılın",
       "contact": "İletişim",
       "rules": "Kurallar",
-      "gameServers": "Oyun Sunucularımız",
-      "cs2server": "Counter-Strike 2"
+      "blog": "Blog"
     }
   },
   "Footer": {
@@ -209,7 +208,8 @@
       "team": "Takımımız",
       "joinUs": "Bize Katılın",
       "contact": "İletişim",
-      "rules": "Kurallar"
+      "rules": "Kurallar",
+      "blog": "Blog"
     },
     "Copyright": {
       "copyright": "Telif Hakkı",

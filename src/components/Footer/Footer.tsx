@@ -47,6 +47,7 @@ export function Footer({ language }: { language: 'en' | 'tr' }) {
     { label: t("Link.joinUs"), path: "/join-us#JoinUs" },
     { label: t("Link.contact"), path: "/contact#Contact" },
     { label: t("Link.rules"), path: "/rules#Rules" },
+    { label: t("Link.blog"), path: "/blog" },
   ];
 
   return (
