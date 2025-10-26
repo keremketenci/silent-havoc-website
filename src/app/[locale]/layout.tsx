@@ -44,28 +44,40 @@ export async function generateMetadata({
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
+    const fallbackTitle = process.env.SITE_TITLE_EN || "SILENT HAVOC";
+    const fallbackDescription = process.env.SITE_DESCRIPTION_EN || "Airsoft Organization";
     return {
-      title: "SILENT HAVOC",
-      description: "Airsoft Organization",
+      title: fallbackTitle,
+      description: fallbackDescription,
       icons: { icon: "/favicon.svg" },
+      metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com"),
     };
   }
 
-  return locale === "tr"
-    ? {
-        title: "SILENT HAVOC",
-        description: "Hava Tüfekleri Organizasyonu",
-        icons: { icon: "/favicon.svg" },
-        keywords: ["airsoft", "organizasyon", "silent havoc"],
-        authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
-      }
-    : {
-        title: "SILENT HAVOC",
-        description: "Airsoft Organization",
-        icons: { icon: "/favicon.svg" },
-        keywords: ["airsoft", "organization", "silent havoc"],
-        authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
-      };
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com";
+  if (locale === "tr") {
+    const title = process.env.SITE_TITLE_TR || "SILENT HAVOC";
+    const description = process.env.SITE_DESCRIPTION_TR || "Hava Tüfekleri Organizasyonu";
+    return {
+      title,
+      description,
+      icons: { icon: "/favicon.svg" },
+      keywords: ["airsoft", "organizasyon", "silent havoc"],
+      authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
+      metadataBase: new URL(siteUrl),
+    };
+  } else {
+    const title = process.env.SITE_TITLE_EN || "SILENT HAVOC";
+    const description = process.env.SITE_DESCRIPTION_EN || "Airsoft Organization";
+    return {
+      title,
+      description,
+      icons: { icon: "/favicon.svg" },
+      keywords: ["airsoft", "organization", "silent havoc"],
+      authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
+      metadataBase: new URL(siteUrl),
+    };
+  }
 }
 
 export default async function LocaleLayout({

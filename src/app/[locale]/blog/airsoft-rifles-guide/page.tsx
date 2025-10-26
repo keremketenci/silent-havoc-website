@@ -12,7 +12,11 @@ export async function generateMetadata({
   const url = `/${locale}/blog/airsoft-rifles-guide`;
   const rawTitle = t("Posts.airsoft-rifles-guide.title");
   const description = t("Posts.airsoft-rifles-guide.description");
-  const title = `${rawTitle} — Silent Havoc`;
+  const siteName =
+    (locale === "tr" ? process.env.SITE_TITLE_TR : process.env.SITE_TITLE_EN) ||
+    process.env.SITE_NAME ||
+    "Silent Havoc";
+  const title = `${rawTitle} — ${siteName}`;
   return {
     title,
     description,
@@ -29,6 +33,10 @@ export default async function AirsoftRiflesGuide({
   const { locale: rawLocale } = await params;
   const locale = rawLocale || "tr";
   const t = await getTranslations({ locale, namespace: "Blog" });
+  const siteName =
+    (locale === "tr" ? process.env.SITE_TITLE_TR : process.env.SITE_TITLE_EN) ||
+    process.env.SITE_NAME ||
+    "Silent Havoc";
   type Section = { h2?: string; p?: string[]; list?: string[] };
   type Content = { intro?: string; sections?: Section[] };
   const content = (t.raw(`Posts.airsoft-rifles-guide.content`) as unknown) as Content;
@@ -42,7 +50,7 @@ export default async function AirsoftRiflesGuide({
             "@type": "Article",
             headline: t("Posts.airsoft-rifles-guide.title"),
             description: t("Posts.airsoft-rifles-guide.description"),
-            author: { "@type": "Organization", name: "Silent Havoc" },
+            author: { "@type": "Organization", name: siteName },
             datePublished: "2025-10-26",
           }),
         }}

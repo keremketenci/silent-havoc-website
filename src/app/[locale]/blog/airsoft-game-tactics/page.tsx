@@ -12,7 +12,11 @@ export async function generateMetadata({
   const url = `/${locale}/blog/airsoft-game-tactics`;
   const rawTitle = t("Posts.airsoft-game-tactics.title");
   const description = t("Posts.airsoft-game-tactics.description");
-  const title = `${rawTitle} — Silent Havoc`;
+  const siteName =
+    (locale === "tr" ? process.env.SITE_TITLE_TR : process.env.SITE_TITLE_EN) ||
+    process.env.SITE_NAME ||
+    "Silent Havoc";
+  const title = `${rawTitle} — ${siteName}`;
   return {
     title,
     description,
@@ -29,6 +33,10 @@ export default async function AirsoftGameTactics({
   const { locale: rawLocale } = await params;
   const locale = rawLocale || "tr";
   const t = await getTranslations({ locale, namespace: "Blog" });
+  const siteName =
+    (locale === "tr" ? process.env.SITE_TITLE_TR : process.env.SITE_TITLE_EN) ||
+    process.env.SITE_NAME ||
+    "Silent Havoc";
   type Section = { h2?: string; p?: string[]; list?: string[] };
   type Content = { intro?: string; sections?: Section[] };
   const content = (t.raw(`Posts.airsoft-game-tactics.content`) as unknown) as Content;
@@ -42,7 +50,7 @@ export default async function AirsoftGameTactics({
             "@type": "Article",
             headline: t("Posts.airsoft-game-tactics.title"),
             description: t("Posts.airsoft-game-tactics.description"),
-            author: { "@type": "Organization", name: "Silent Havoc" },
+            author: { "@type": "Organization", name: siteName },
             datePublished: "2025-10-26",
           }),
         }}

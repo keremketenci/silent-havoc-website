@@ -19,6 +19,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url },
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com"),
   };
 }
 
