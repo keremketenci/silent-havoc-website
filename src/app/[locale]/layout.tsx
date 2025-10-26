@@ -15,6 +15,7 @@ import ClickSpark from "@/components/ClickSpark";
 import { Toaster } from "@/components/shadcn/ui/sonner";
 import LogoBackground from "@/components/LogoBackground";
 import Noise from "@/components/Noise";
+import { NoiseToggleGate } from "@/components/NoiseToggleGate";
 import LoadingWrapper from "@/components/Loading/LoadingWrapper";
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -95,9 +96,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased min-h-screen`} // bg-pattern
       >
-        <div className="fixed inset-0 -z-99">
-          <Noise />
-        </div>
+        <NoiseToggleGate />
 
         <NextIntlClientProvider>
           <header className="fixed top-0 left-0 w-full shadow-md bg-background p-2 z-99 border-b border-slate-800">

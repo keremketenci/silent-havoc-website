@@ -21,6 +21,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { LanguageChangeButton } from "@/components/LanguageChangeButton";
 import { Separator } from "@/components/shadcn/ui/separator";
 import { useNavigateToSection } from "@/app/hooks/useNavigateToSection";
+import NoiseModeToggle from "@/components/NoiseModeToggle";
 
 interface MenuItem {
   label: string;
@@ -131,9 +132,12 @@ export function Navbar({ className }: NavbarProps) {
           </NavigationMenu>
 
           <NavigationMenu>
-            <NavigationMenuList className="cursor-target">
-              <NavigationMenuItem>
+            <NavigationMenuList className="items-center gap-3">
+              <NavigationMenuItem className="cursor-target">
                 <LanguageChangeButton />
+              </NavigationMenuItem>
+              <NavigationMenuItem className="cursor-target">
+                <NoiseModeToggle className="p-2" id="noise-switch" />
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -145,9 +149,12 @@ export function Navbar({ className }: NavbarProps) {
         className={`${className} flex flex-col md:hidden justify-between`}
         ref={navbarRef}
       >
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center gap-2">
           <ButtonNav checked={isButtonNavChecked} onChange={toggleNavbar} />
-          <LanguageChangeButton />
+          <div className="flex items-center gap-2">
+            <LanguageChangeButton />
+            <NoiseModeToggle id="noise-switch-mobile" size="sm" />
+          </div>
         </div>
 
         {isNavbarOpen && (
