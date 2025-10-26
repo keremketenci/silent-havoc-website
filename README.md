@@ -2,7 +2,7 @@
 <p align="center">Welcome to the official website of Silent-Havoc, an Airsoft Organization.</p>
 
 <p align="center">
-  <a href="https://www.silent-havoc.com" title="Visit Silent-Havoc">🌐 Website</a>
+  <a href="https://silent-havoc.com" title="Visit Silent-Havoc">🌐 Website</a>
 </p>
 
 ## Installation
