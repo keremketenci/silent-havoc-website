@@ -31,54 +31,96 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: "SILENT HAVOC",
-//   description: "Airsoft Organization",
-//   icons: {
-//     icon: "/favicon.svg",
-//   },
-// };
-
 export async function generateMetadata({
   params,
 }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
-
-  if (!hasLocale(routing.locales, locale)) {
-    const fallbackTitle = process.env.SITE_TITLE_EN || "SILENT HAVOC";
-    const fallbackDescription = process.env.SITE_DESCRIPTION_EN || "Airsoft Organization";
-    return {
-      title: fallbackTitle,
-      description: fallbackDescription,
-      icons: { icon: "/favicon.svg" },
-      metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com"),
-    };
-  }
+  const isValidLocale = hasLocale(routing.locales, locale);
+  const resolvedLocale = isValidLocale ? locale : "en";
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com";
-  if (locale === "tr") {
-    const title = process.env.SITE_TITLE_TR || "SILENT HAVOC";
-    const description = process.env.SITE_DESCRIPTION_TR || "Hava Tüfekleri Organizasyonu";
-    return {
+  const isTR = resolvedLocale === "tr";
+
+  const title = isTR
+    ? process.env.SITE_TITLE_TR ||
+      "SILENT HAVOC | Airsoft Takımı ve Organizasyonu"
+    : process.env.SITE_TITLE_EN ||
+      "SILENT HAVOC | Airsoft Team and Organization";
+
+  const description = isTR
+    ? process.env.SITE_DESCRIPTION_TR ||
+      "Türkiye’nin en iyi airsoft alanlarını ve profesyonel takımlarını keşfedin. Adrenalin, strateji ve ekip ruhunu bir arada yaşayın!"
+    : process.env.SITE_DESCRIPTION_EN ||
+      "Discover Turkey’s top airsoft fields and professional teams. Experience adrenaline, strategy, and team spirit together!";
+
+  const keywords = isTR
+    ? [
+        "airsoft",
+        "airsoft takımı",
+        "airsoft organizasyon",
+        "airsoft etkinlik",
+        "airsoft oyunları",
+        "airsoft kuralları",
+        "airsoft taktikleri",
+        "airsoft strateji",
+        "airsoft ekipman",
+        "airsoft tüfek",
+        "airsoft tabanca",
+        "milsim",
+        "CQB",
+        "istanbul airsoft",
+        "airsoft Türkiye",
+        "silent havoc",
+      ]
+    : [
+        "airsoft",
+        "airsoft team",
+        "airsoft organization",
+        "airsoft events",
+        "airsoft games",
+        "airsoft rules",
+        "airsoft tactics",
+        "airsoft strategy",
+        "airsoft gear",
+        "airsoft rifles",
+        "airsoft pistols",
+        "milsim",
+        "CQB",
+        "airsoft Istanbul",
+        "airsoft Turkey",
+        "silent havoc",
+      ];
+
+  const ogLocale = isTR ? "tr_TR" : "en_US";
+
+  return {
+    title,
+    description,
+    icons: { icon: "/favicon.svg" },
+    keywords,
+    authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `${siteUrl}/${resolvedLocale}/`,
+      languages: {
+        en: `${siteUrl}/en/`,
+        tr: `${siteUrl}/tr/`,
+      },
+    },
+    openGraph: {
       title,
       description,
-      icons: { icon: "/favicon.svg" },
-      keywords: ["airsoft", "organizasyon", "silent havoc"],
-      authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
-      metadataBase: new URL(siteUrl),
-    };
-  } else {
-    const title = process.env.SITE_TITLE_EN || "SILENT HAVOC";
-    const description = process.env.SITE_DESCRIPTION_EN || "Airsoft Organization";
-    return {
+      url: `${siteUrl}/${resolvedLocale}/`,
+      siteName: "SILENT HAVOC",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
       title,
       description,
-      icons: { icon: "/favicon.svg" },
-      keywords: ["airsoft", "organization", "silent havoc"],
-      authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
-      metadataBase: new URL(siteUrl),
-    };
-  }
+    },
+  };
 }
 
 export default async function LocaleLayout({
