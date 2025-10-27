@@ -36,7 +36,7 @@ interface MenuItem {
   }[];
 }
 
-export function Footer({ language }: { language: 'en' | 'tr' }) {
+export function Footer({ language }: { language: "en" | "tr" }) {
   const t = useTranslations("Footer");
   const t2 = useTranslations("Toast");
   const navigateToSection = useNavigateToSection();
@@ -51,7 +51,7 @@ export function Footer({ language }: { language: 'en' | 'tr' }) {
   ];
 
   return (
-    <div>
+    <div className="px-4">
       <div className="flex justify-between items-center">
         <div className="relative w-24 h-24 items-center flex justify-center">
           <div
@@ -65,12 +65,15 @@ export function Footer({ language }: { language: 'en' | 'tr' }) {
         </div>
         <div>
           <NavigationMenu className="dark">
-            <NavigationMenuList className="md:space-x-8">
+            <NavigationMenuList className="grid grid-cols-2 md:flex gap-x-8 md:gap-x-0 md:space-x-8">
               {menuItems.map((item) => (
-                <NavigationMenuItem key={item.label} className="cursor-pointer md:cursor-none cursor-target">
+                <NavigationMenuItem
+                  key={item.label}
+                  className="cursor-pointer md:cursor-none cursor-target"
+                >
                   {item.children ? (
                     <NavigationMenuLink
-                      className="text-md text-center md:text-xl"
+                      className="text-center"
                       onClick={() => navigateToSection(item.path)}
                     >
                       <DropdownMenu>
@@ -97,7 +100,7 @@ export function Footer({ language }: { language: 'en' | 'tr' }) {
                     </NavigationMenuLink>
                   ) : (
                     <NavigationMenuLink
-                      className="text-md text-center md:text-xl"
+                      className="text-md text-center"
                       onClick={() => navigateToSection(item.path)}
                     >
                       {item.label}
