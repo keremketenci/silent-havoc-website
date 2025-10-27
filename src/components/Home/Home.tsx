@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 // components
 import { CT } from "./CT";
-import { FM } from "./FM";
+// import { FM } from "./FM";
 import InstagramFeed from "./InstagramFeed";
 
 export function Home() {
@@ -15,9 +15,10 @@ export function Home() {
         {/* Text Section */}
         <div className="text-center px-4 pb-2 lg:p-0">
           <p className="text-4xl font-bold text-accent pb-6">{`${t(
-            "title"
+            "title",
           )}!`}</p>
           <p className="text-lg text-gray-300 pb-6">{`${t("about")}.`}</p>
+          <p className="text-lg text-gray-300 pb-6 font-bold">{`${t("greeting")}.`}</p>
         </div>
 
         <div></div>
@@ -27,7 +28,7 @@ export function Home() {
         </div>
       </div>
       <div>
-        <InstagramFeed/>
+        <InstagramFeed />
       </div>
       {/* <div className="my-48">
         <FM />
