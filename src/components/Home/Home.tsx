@@ -18,7 +18,7 @@ export function Home() {
             "title",
           )}!`}</p>
           <p className="text-lg text-gray-300 pb-6">{`${t("about")}.`}</p>
-          <p className="text-lg text-gray-300 pb-6 font-bold">{`${t("greeting")}.`}</p>
+          <p className="text-lg text-gray-300 pb-6 font-bold">{`${t("greeting")}...`}</p>
         </div>
 
         <div></div>
