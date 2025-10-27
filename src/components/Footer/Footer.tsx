@@ -23,7 +23,7 @@ import { toast } from "sonner";
 // components ui
 import { ButtonSocials } from "@/components/ui/button/ButtonSocials";
 import { Separator } from "@/components/shadcn/ui/separator";
-import NavigationMenuScroller from "@/components/Footer/NavigationMenuScroller";
+// import NavigationMenuScroller from "@/components/Footer/NavigationMenuScroller";
 import FooterSignature from "@/components/Footer/FooterSignature";
 
 interface MenuItem {
