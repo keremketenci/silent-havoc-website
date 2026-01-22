@@ -4,14 +4,24 @@ import { useTranslations } from "next-intl";
 // components
 import { TeamMemberCard } from "@/components/Team/TeamMemberCard";
 import SocialButtonsWrapper from "@/Wrappers/ButtonSocialsWrapper";
+import { Separator } from "@/components/shadcn/ui/separator";
 
 // data
 import { teamLeaders } from "@/components/Team/data/teamLeaders";
 import { teamMembers } from "@/components/Team/data/teamMembers";
-import { Separator } from "@/components/shadcn/ui/separator";
 
 export default function Team() {
-  const t = useTranslations("Team");
+  const t = useTranslations();
+
+  // 🔹 Sadece gerçek roller için
+  const roleKeyToTranslation = (key: string) => {
+    const role = key.split(".").pop();
+    return `Team.Roles.${role}`;
+  };
+
+  // 🔹 In-game role / nickname için (çeviri YOK)
+  const cleanLabel = (key: string) =>
+    key.split(".").pop() ?? key;
 
   return (
     <div className="flex flex-col items-center space-y-12">
@@ -24,26 +34,40 @@ export default function Team() {
             <div
               key={idx}
               className={`
-          flex justify-center
-          ${
-            isLeader
-              ? `
-              sm:col-span-2          /* in 2-column layout, leader spans full row */
-              lg:col-span-1 lg:col-start-2 /* centered in 3-column layout */
-              lg:row-start-1         /* stay on the same row */
-              lg:-translate-y-4      /* lift up */
-            `
-              : `
-              lg:row-start-1         /* in 3 columns, keep on the same row */
-            `
-          }
-        `}
+                flex justify-center
+                ${
+                  isLeader
+                    ? `
+                      sm:col-span-2
+                      lg:col-span-1 lg:col-start-2
+                      lg:row-start-1
+                      lg:-translate-y-4
+                    `
+                    : `
+                      lg:row-start-1
+                    `
+                }
+              `}
             >
               <TeamMemberCard
                 title={leader.name}
-                description={`${t(leader.roleKey)}`} // & ${t(leader.inGameRoleKey)}
+                description={
+                  <div className="flex flex-col items-center text-center">
+                    {/* ✅ ÇEVİRİLİ ROL */}
+                    <span className="font-medium">
+                      {t(roleKeyToTranslation(leader.roleKey))}
+                    </span>
+
+                    {/* ✅ IN-GAME ROLE / NICKNAME */}
+                    <span className="text-sm">
+                      {cleanLabel(leader.inGameRoleKey)}
+                    </span>
+                  </div>
+                }
                 contentImage={leader.image}
-                footerText={<SocialButtonsWrapper socials={leader.socials} />}
+                footerText={
+                  <SocialButtonsWrapper socials={leader.socials} />
+                }
               />
             </div>
           );
@@ -58,9 +82,20 @@ export default function Team() {
           <TeamMemberCard
             key={idx}
             title={member.name}
-            description={`${t(member.roleKey)}`} //  & ${t(member.inGameRoleKey)}
+            description={
+              <div className="flex flex-col items-center text-center">
+                <span className="font-medium">
+                  {t(roleKeyToTranslation(member.roleKey))}
+                </span>
+                <span className="text-sm">
+                  {cleanLabel(member.inGameRoleKey)}
+                </span>
+              </div>
+            }
             contentImage={member.image}
-            footerText={<SocialButtonsWrapper socials={member.socials} />}
+            footerText={
+              <SocialButtonsWrapper socials={member.socials} />
+            }
           />
         ))}
       </div>
