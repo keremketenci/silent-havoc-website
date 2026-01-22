@@ -17,13 +17,4 @@ export const teamMembers = [
       { link: "https://www.instagram.com/ecostavakya/", icon: "instagram2" },
     ],
   },
-  {
-    name: "Oğuz Tonyalı",
-    roleKey: "Roles.Member",
-    inGameRoleKey: "InGame-Roles.Entry-Fragger",
-    image: "/images/team/Oğuz-Tonyalı.jpg",
-    socials: [
-      { link: "https://www.instagram.com/ogz.tonyali/", icon: "instagram2" },
-    ],
-  },
 ];
