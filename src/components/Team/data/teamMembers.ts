@@ -26,22 +26,4 @@ export const teamMembers = [
       { link: "https://www.instagram.com/ogz.tonyali/", icon: "instagram2" },
     ],
   },
-  {
-    name: "Oğuzhan Dermentepe",
-    roleKey: "Roles.Member",
-    inGameRoleKey: "InGame-Roles.Entry-Fragger",
-    image: "/images/team/Oğuzhan-Dermentepe.jpg",
-    socials: [
-      { link: "https://www.instagram.com/oguzhandermentepe/", icon: "instagram2" },
-    ],
-  },
-  {
-    name: "Vitaly Kotelnikov",
-    roleKey: "Roles.Member",
-    inGameRoleKey: "InGame-Roles.Entry-Fragger",
-    image: "/images/team/Vitaly-Kotelnikov.jpg",
-    socials: [
-      { link: "#", icon: "loading" },
-    ],
-  }
 ];
