@@ -3,7 +3,7 @@ export const teamLeaders = [
     name: "Atilla ÇİFTCİ",
     roleKey: "Roles.Team-Captain",
     inGameRoleKey: "BravoSix",
-    image: "/images/team/Atilla-Çiftci.jpg",
+    image: "/images/team/atilla-Çiftci.png",
     socials: [
       { link: "https://www.instagram.com/silent_havoc_istanbul/", icon: "instagram2" },
     ],
