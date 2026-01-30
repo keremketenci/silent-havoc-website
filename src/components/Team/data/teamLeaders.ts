@@ -18,12 +18,12 @@ export const teamLeaders = [
     ],
   },
   {
-    name: "Gürkan Keleş",
+    name: "İbrahim Odabaşı",
     roleKey: "Roles.Vice-Captain",
-    inGameRoleKey: "DarkSide",
-    image: "/images/team/Gürkan-Keleş.jpg",
+    inGameRoleKey: "Axe",
+    image: "/images/team/İbrahim-Odabasi.png",
     socials: [
       { link: "https://www.instagram.com/silent_havoc_istanbul/", icon: "instagram2" },
     ],
-  },
+  },  
 ];
