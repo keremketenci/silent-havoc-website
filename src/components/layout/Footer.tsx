@@ -42,7 +42,7 @@ export function Footer({ language }: { language: "en" | "tr" }) {
                   key={item.key}
                   className="cursor-pointer md:cursor-none cursor-target"
                 >
-                  <NavigationMenuLink asChild className="text-md text-center">
+                  <NavigationMenuLink asChild className="text-md text-center md:cursor-none">
                     <Link href={item.href}>{t(`Link.${item.key}`)}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>

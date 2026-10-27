@@ -41,7 +41,7 @@ export async function InstagramFeed() {
           href={post.permalink}
           target="_blank"
           rel="noopener noreferrer"
-          className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+          className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 md:cursor-none"
         >
           {post.media_type === "VIDEO" ? (
             <video

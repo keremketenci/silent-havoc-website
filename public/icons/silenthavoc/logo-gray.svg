@@ -2112,13 +2112,13 @@
          inkscape:label="eye1-r"
          transform="translate(0,-2.5e-5)" />
       <path
-         style="opacity:1;fill:#008000;stroke-width:1.59176;paint-order:stroke fill markers"
+         style="opacity:0.5;fill:#008000;stroke-width:1.59176;paint-order:stroke fill markers"
          d="m 4405.2649,3831.7765 a 556.38546,556.38546 0 0 0 -556.3855,-556.3855 556.38546,556.38546 0 0 0 -556.3855,556.3855 556.38546,556.38546 0 0 0 556.3855,556.3854 556.38546,556.38546 0 0 0 556.3855,-556.3854 z"
          id="path4"
          inkscape:label="eye2-l"
          sodipodi:insensitive="true" />
       <path
-         style="opacity:1;fill:#008000;stroke-width:1.59176;paint-order:stroke fill markers"
+         style="opacity:0.5;fill:#008000;stroke-width:1.59176;paint-order:stroke fill markers"
          d="m 6909.5722,3837.9538 a 556.38546,556.38546 0 0 0 -556.3855,-556.3854 556.38546,556.38546 0 0 0 -556.3855,556.3854 556.38546,556.38546 0 0 0 556.3855,556.3855 556.38546,556.38546 0 0 0 556.3855,-556.3855 z"
          id="path134"
          inkscape:label="eye2-r"
@@ -2331,5 +2331,4 @@
       </g>
     </g>
   </g>
-  <style>@keyframes eyePulse{0%{opacity:.5}100%{opacity:1}}#path4,#path134{animation:eyePulse 5s infinite alternate}</style>
 </svg>

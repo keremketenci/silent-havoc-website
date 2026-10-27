@@ -54,7 +54,7 @@ export function Navbar({ className }: NavbarProps) {
             <NavigationMenuList className="space-x-8">
               {menuItems.map((item) => (
                 <NavigationMenuItem key={item.key} className="cursor-target">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink asChild className="md:cursor-none">
                     <Link href={item.href}>{t(`Link.${item.key}`)}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>

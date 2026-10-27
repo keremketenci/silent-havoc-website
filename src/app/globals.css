@@ -109,6 +109,19 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Background logo eyes: slow "breathing" glow */
+  --animate-eye-glow: eye-glow 5s ease-in-out infinite;
+
+  @keyframes eye-glow {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
 
 body {
