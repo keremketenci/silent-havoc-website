@@ -12,8 +12,7 @@
     "Roles": {
       "Team-Captain": "Takım Kaptanı",
       "Vice-Captain": "Yardımcı Kaptan",
-      "Member": "Takım Oyuncusu",
-      "Orientation-Captain": "Oryantasyon Kaptanı"
+      "Member": "Takım Oyuncusu"
     },
     "InGame-Roles": {
       "Entry-Fragger": "Öncü Saldıran",

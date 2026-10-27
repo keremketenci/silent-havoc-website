@@ -12,8 +12,7 @@
     "Roles": {
       "Team-Captain": "Team Captain",
       "Vice-Captain": "Vice Captain",
-      "Member": "Team Member",
-      "Orientation-Captain": "Orientation Captain"
+      "Member": "Team Member"
     },
     "InGame-Roles": {
       "Entry-Fragger": "Entry Fragger",
