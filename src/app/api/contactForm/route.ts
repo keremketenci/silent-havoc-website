@@ -1,21 +1,20 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { z } from "zod";
+
+import { contactEmail } from "@/lib/site";
+import { createTransport, escapeHtml } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
 // Server-side validation schema
 const emailSchema = z.object({
   sender: z.object({
-    name: z.string().min(2),
-    address: z.string().email(),
+    name: z.string().min(2).max(200),
+    address: z.email(),
   }),
-  recipients: z.array(z.object({ address: z.string().email() })).min(1),
-  subject: z.string().min(3),
-  message: z.string().min(10),
+  subject: z.string().min(3).max(300),
+  message: z.string().min(10).max(5000),
 });
-
-type EmailBody = z.infer<typeof emailSchema>;
 
 export async function POST(req: Request) {
   try {
@@ -24,45 +23,27 @@ export async function POST(req: Request) {
 
     if (!parsed.success) {
       return NextResponse.json(
-        { ok: false, error: "Invalid payload", details: parsed.error.format() },
+        { ok: false, error: "Invalid payload", details: z.treeifyError(parsed.error) },
         { status: 400 }
       );
     }
 
-    const data: EmailBody = parsed.data;
+    const data = parsed.data;
 
-    // Read SMTP config from environment
-    const {
-      SMTP_HOST = "smtp.gmail.com",
-      SMTP_PORT = "465",
-      SMTP_USER,
-      SMTP_PASS,
-    } = process.env;
-
-    if (!SMTP_USER || !SMTP_PASS) {
+    const mail = createTransport();
+    if (!mail) {
       return NextResponse.json(
         { ok: false, error: "SMTP credentials not configured on server." },
         { status: 500 }
       );
     }
+    const { transporter, user } = mail;
 
-    // create transporter
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: parseInt(SMTP_PORT, 10),
-      secure: true,
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
-      },
-    });
-
-    const to = data.recipients.map((r) => r.address).join(", ");
-
-    // 1) Send mail to your customer (main recipient)
+    // 1) Send mail to the team inbox. The recipient is fixed on the server
+    // so this endpoint can't be used to send mail to arbitrary addresses.
     const info = await transporter.sendMail({
-      from: `"${data.sender.name}" <${SMTP_USER}>`,
-      to,
+      from: { name: data.sender.name, address: user },
+      to: contactEmail,
       subject: data.subject,
       text: data.message,
       html: `<pre style="white-space:pre-wrap">${escapeHtml(data.message)}</pre>
@@ -75,26 +56,26 @@ export async function POST(req: Request) {
 
     // 2) Send auto-reply back to the form sender
     await transporter.sendMail({
-      from: `"SILENT HAVOC" <${SMTP_USER}>`,
+      from: { name: "SILENT HAVOC", address: user },
       to: data.sender.address,
       subject: `Mesajınızı Aldık / We received your message: ${data.subject}`,
-      text: `[TR]  
-      Merhaba ${data.sender.name},
+      text: `[TR]
+Merhaba ${data.sender.name},
 
-      Bizimle iletişime geçtiğiniz için teşekkür ederiz. Mesajınızı aldık ve en kısa sürede size dönüş yapacağız.
+Bizimle iletişime geçtiğiniz için teşekkür ederiz. Mesajınızı aldık ve en kısa sürede size dönüş yapacağız.
 
-      Saygılarımızla,  
-      SILENT HAVOC
+Saygılarımızla,
+SILENT HAVOC
 
-      ----------------------------------
+----------------------------------
 
-      [ENG]  
-      Hello ${data.sender.name},
+[ENG]
+Hello ${data.sender.name},
 
-      Thank you for reaching out. We received your message and will respond as soon as possible.
+Thank you for reaching out. We received your message and will respond as soon as possible.
 
-      Best regards,  
-      SILENT HAVOC`,
+Best regards,
+SILENT HAVOC`,
       html: `
     <p><strong>[TR]</strong></p>
     <p>Merhaba ${escapeHtml(data.sender.name)},</p>
@@ -121,12 +102,4 @@ export async function POST(req: Request) {
       { status: 500 }
     );
   }
-}
-
-function escapeHtml(s: string) {
-  return s
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
 }

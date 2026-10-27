@@ -1,22 +1,17 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const host = process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com";
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/api/*",
-          "/_next/static/",
-          "/_next/image/",
-          "/favicon.ico",
-        ],
+        // Do not block /_next: crawlers need JS/CSS/images to render pages
+        disallow: ["/api/"],
       },
     ],
-    host,
-    sitemap: `${host}/sitemap.xml`,
+    host: siteUrl,
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }

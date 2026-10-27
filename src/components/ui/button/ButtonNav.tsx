@@ -24,4 +24,3 @@ export const ButtonNav: React.FC<ButtonNavProps> = ({ checked, onChange }) => {
   );
 };
 
-export default ButtonNav;

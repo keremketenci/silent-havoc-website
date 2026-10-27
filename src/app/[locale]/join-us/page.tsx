@@ -1,21 +1,21 @@
-"use client";
+import { setRequestLocale } from "next-intl/server";
 
-import { useState } from "react";
+import { JoinUsSection } from "@/components/sections/JoinUs/JoinUsSection";
+import { translatedPageMetadata } from "@/lib/metadata";
 
-import { JoinUs } from "@/components/JoinUs/JoinUs";
-import { JoinUsForm } from "@/components/JoinUs/JoinUsForm";
+export function generateMetadata({ params }: PageProps<"/[locale]/join-us">) {
+  return translatedPageMetadata(params, "joinUs", "/join-us");
+}
 
-export default function JoinUsPage() {
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+export default async function JoinUsPage({
+  params,
+}: PageProps<"/[locale]/join-us">) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div className="flex flex-col gap-24 px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48">
-      <section id="JoinUs">
-        <JoinUs onApplyClick={setSelectedJobTitle} />
-      </section>
-
-      <section id="JoinUsForm">
-        <JoinUsForm prefillSubject={selectedJobTitle} />
-      </section>
+      <JoinUsSection />
     </div>
   );
 }

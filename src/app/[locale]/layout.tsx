@@ -4,41 +4,39 @@ import { Analytics } from "@vercel/analytics/next";
 
 // translations
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 // components
-import { Navbar } from "@/components/Navbar/navbar";
-import { Footer } from "@/components/Footer/Footer";
-import { CursorWrapper } from "@/components/TargetCursor/CursorWrapper";
-import ClickSpark from "@/components/ClickSpark";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { CursorWrapper } from "@/components/effects/CursorWrapper";
+import { ClickSpark } from "@/components/effects/ClickSpark";
 import { Toaster } from "@/components/shadcn/ui/sonner";
-import LogoBackground from "@/components/LogoBackground";
-import Noise from "@/components/Noise";
-import { NoiseToggleGate } from "@/components/NoiseToggleGate";
-import LoadingWrapper from "@/components/Loading/LoadingWrapper";
+import { LogoBackground } from "@/components/layout/LogoBackground";
+import { NoiseToggleGate } from "@/components/layout/NoiseToggleGate";
+import { LoadingWrapper } from "@/components/layout/LoadingWrapper";
 
-import { Geist, Geist_Mono } from "next/font/google";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { alternatesFor, localizedUrl, ogImage, siteName, siteUrl } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "dark",
+};
 
 export async function generateMetadata({
   params,
 }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
-  const isValidLocale = hasLocale(routing.locales, locale);
-  const resolvedLocale = isValidLocale ? locale : "en";
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://silenthavoc.com";
+  const resolvedLocale = hasLocale(routing.locales, locale)
+    ? locale
+    : routing.defaultLocale;
   const isTR = resolvedLocale === "tr";
 
   const title = isTR
@@ -91,29 +89,25 @@ export async function generateMetadata({
         "silent havoc",
       ];
 
-  const ogLocale = isTR ? "tr_TR" : "en_US";
-
   return {
-    title,
+    // Child pages only set their own title, e.g. "Rules | SILENT HAVOC"
+    title: { default: title, template: `%s | ${siteName}` },
     description,
+    applicationName: siteName,
     icons: { icon: "/favicon.svg" },
     keywords,
     authors: [{ name: "Kerem Ketenci", url: "https://keremketenci.com" }],
     metadataBase: new URL(siteUrl),
-    alternates: {
-      canonical: `${siteUrl}/${resolvedLocale}/`,
-      languages: {
-        en: `${siteUrl}/en/`,
-        tr: `${siteUrl}/tr/`,
-      },
-    },
+    // Home page values; every other page overrides these with its own path
+    alternates: alternatesFor(resolvedLocale),
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/${resolvedLocale}/`,
-      siteName: "SILENT HAVOC",
-      locale: ogLocale,
+      url: localizedUrl(resolvedLocale),
+      siteName,
+      locale: isTR ? "tr_TR" : "en_US",
       type: "website",
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
@@ -132,11 +126,14 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  // Enables static rendering for every page under this layout
+  setRequestLocale(locale);
+
   return (
     <html lang={locale} className="dark" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} relative antialiased min-h-screen`} // bg-pattern
+        className="relative antialiased min-h-screen" // bg-pattern
       >
         <NoiseToggleGate />
 
@@ -161,18 +158,16 @@ export default async function LocaleLayout({
               sparkCount={8}
               duration={400}
             >
-              <div>
-                <LogoBackground />
-              </div>
+              <LogoBackground />
               <LoadingWrapper>{children}</LoadingWrapper>
-              <Analytics />
-              <div className="pt-12">
-                <Footer language={locale as "en" | "tr"} />
-              </div>
+              <footer className="pt-12">
+                <Footer language={locale} />
+              </footer>
             </ClickSpark>
           </main>
           <Toaster className="cursor-default" />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

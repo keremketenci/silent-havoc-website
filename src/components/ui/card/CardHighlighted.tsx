@@ -8,7 +8,6 @@ import styles from "@/components/ui/card/CardHighlighted.module.css";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,

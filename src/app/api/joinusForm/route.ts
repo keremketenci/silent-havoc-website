@@ -1,17 +1,16 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { z } from "zod";
+
+import { contactEmail } from "@/lib/site";
+import { createTransport, escapeHtml } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
 const emailSchema = z.object({
-  sender: z.object({ name: z.string().min(2), address: z.string().email() }),
-  recipients: z.array(z.object({ address: z.string().email() })).min(1),
-  subject: z.string().min(3),
-  message: z.string().min(10),
+  sender: z.object({ name: z.string().min(2).max(200), address: z.email() }),
+  subject: z.string().min(3).max(300),
+  message: z.string().min(10).max(5000),
 });
-
-type EmailBody = z.infer<typeof emailSchema>;
 
 export async function POST(req: Request) {
   try {
@@ -19,61 +18,50 @@ export async function POST(req: Request) {
     const parsed = emailSchema.safeParse(body);
     if (!parsed.success)
       return NextResponse.json(
-        { ok: false, error: "Invalid payload", details: parsed.error.format() },
+        { ok: false, error: "Invalid payload", details: z.treeifyError(parsed.error) },
         { status: 400 }
       );
 
-    const data: EmailBody = parsed.data;
+    const data = parsed.data;
 
-    const {
-      SMTP_HOST = "smtp.gmail.com",
-      SMTP_PORT = "465",
-      SMTP_USER,
-      SMTP_PASS,
-    } = process.env;
-    if (!SMTP_USER || !SMTP_PASS)
+    const mail = createTransport();
+    if (!mail)
       return NextResponse.json(
         { ok: false, error: "SMTP not configured." },
         { status: 500 }
       );
+    const { transporter, user } = mail;
 
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: parseInt(SMTP_PORT, 10),
-      secure: true,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
+    const name = escapeHtml(data.sender.name);
 
-    const to = data.recipients.map((r) => r.address).join(",");
-
-    // Send mail to owner
+    // Send mail to owner (recipient fixed on the server)
     await transporter.sendMail({
-      from: `"${data.sender.name}" <${SMTP_USER}>`,
-      to,
+      from: { name: data.sender.name, address: user },
+      to: contactEmail,
       subject: data.subject,
       text: data.message,
-      html: `<pre style="white-space:pre-wrap">${data.message}</pre><hr/><p>From: ${data.sender.name} &lt;${data.sender.address}&gt;</p>`,
+      html: `<pre style="white-space:pre-wrap">${escapeHtml(data.message)}</pre><hr/><p>From: ${name} &lt;${escapeHtml(data.sender.address)}&gt;</p>`,
       replyTo: data.sender.address,
     });
 
     // Auto-reply
     await transporter.sendMail({
-      from: `"SILENT HAVOC" <${SMTP_USER}>`,
+      from: { name: "SILENT HAVOC", address: user },
       to: data.sender.address,
       subject: `Mesajınızı Aldık / We received your message: ${data.subject}`,
-      text: `[TR] 
-      Merhaba ${data.sender.name}, 
-      Bizimle iletişime geçtiğiniz için teşekkür ederiz. Başvurunuzu aldık ve en kısa sürede size dönüş yapacağız.
+      text: `[TR]
+Merhaba ${data.sender.name},
+Bizimle iletişime geçtiğiniz için teşekkür ederiz. Başvurunuzu aldık ve en kısa sürede size dönüş yapacağız.
 
-      [ENG] 
-      Hello ${data.sender.name}, 
-      Thank you for reaching out. We received your application and will respond as soon as possible.`,
-      html: `<p>[TR] 
-      Merhaba ${data.sender.name}, 
+[ENG]
+Hello ${data.sender.name},
+Thank you for reaching out. We received your application and will respond as soon as possible.`,
+      html: `<p>[TR]
+      Merhaba ${name},
       Bizimle iletişime geçtiğiniz için teşekkür ederiz. Başvurunuzu aldık ve en kısa sürede size dönüş yapacağız.</p>
       <hr/>
-      <p>[ENG] 
-      Hello ${data.sender.name}, 
+      <p>[ENG]
+      Hello ${name},
       Thank you for reaching out. We received your application and will respond as soon as possible.</p>`,
     });
 

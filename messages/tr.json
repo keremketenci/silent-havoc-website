@@ -255,5 +255,23 @@
         "noip": "Ip Adresi Mevcut Değil"
       }
     }
+  },
+  "Metadata": {
+    "team": {
+      "title": "Takımımız",
+      "description": "Silent Havoc airsoft takımıyla tanışın: İstanbul merkezli kaptanlarımız, kaptan yardımcılarımız ve üyelerimiz."
+    },
+    "joinUs": {
+      "title": "Bize Katılın",
+      "description": "Silent Havoc ile airsoft oynamak ister misin? İstanbul merkezli airsoft takımımıza katılmak için başvur."
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Oyunlar, etkinlikler ve iş birlikleri için Silent Havoc airsoft takımıyla iletişime geçin."
+    },
+    "rules": {
+      "title": "Airsoft Kuralları",
+      "description": "Her Silent Havoc oyuncusunun uyması gereken genel airsoft kuralları ve güvenlik talimatları."
+    }
   }
 }

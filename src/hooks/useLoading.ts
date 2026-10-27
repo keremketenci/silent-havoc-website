@@ -1,18 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-export function useLoading(isReady: boolean, minMs = 1000) {
+// Keeps the loading overlay visible for `minMs` after mount
+export function useLoading(minMs = 1000) {
   const [visible, setVisible] = useState(true);
-  const mountedAt = useRef<number>(Date.now());
 
   useEffect(() => {
-    if (!isReady) return;
-
-    const elapsed = Date.now() - mountedAt.current;
-    const remaining = Math.max(0, minMs - elapsed);
-
-    const t = setTimeout(() => setVisible(false), remaining);
+    const t = setTimeout(() => setVisible(false), minMs);
     return () => clearTimeout(t);
-  }, [isReady, minMs]);
+  }, [minMs]);
 
   return visible;
 }

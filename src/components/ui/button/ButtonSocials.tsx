@@ -1,73 +1,75 @@
-"use client";
-
-// translations
-import { useTranslations } from "next-intl";
-
-import React from "react";
-
 // styles
 import styles from "@/components/ui/button/ButtonSocials.module.css";
 
 // components ui
-import { Button } from "@/components/shadcn/ui/button";
-import { toast } from "sonner";
+import { buttonVariants } from "@/components/shadcn/ui/button";
+import { ButtonSocialsCopy } from "@/components/ui/button/ButtonSocialsCopy";
+import { cn } from "@/lib/utils";
 
 // components
-import { Icon } from "@/components/Icon";
+import { Icon } from "@/components/ui/Icon";
+import type { IconName } from "@/data/icons";
 
 interface ButtonSocialsProps {
   link: string;
   logoClass?: string;
-  icon: string;
+  icon: IconName;
   iconClass?: string;
   isActive: boolean;
   alt?: string;
 }
 
-export const ButtonSocials: React.FC<ButtonSocialsProps> = ({
+// Server component: renders a real <a href> so the link is crawlable and works
+// without JavaScript. Only the "copy e-mail" variant needs client-side code.
+export function ButtonSocials({
   link,
   icon,
   iconClass,
   isActive,
   alt,
-}) => {
-  const t2 = useTranslations("Toast");
+}: ButtonSocialsProps) {
+  const className = cn(
+    buttonVariants({ variant: "ghost" }),
+    isActive && styles["ButtonSocials"],
+    styles[`ButtonSocials-${icon}`],
+    "cursor-pointer md:cursor-none cursor-target"
+  );
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(link);
-      if (link.includes("@")) {
-        toast.success(`${t2("CardTeam.Email.Copy.success")}`);
-      } else if (link.includes("#")) {
-        toast.info(`${t2("CardTeam.Email.Copy.nolink")}`);
-      }
-    } catch (err) {
-      toast.error(`${t2("CardTeam.Email.Copy.noemail")}`);
-    }
-  };
+  const iconElement = (
+    <Icon
+      name={icon}
+      className={`md:cursor-none ${iconClass} ${styles["ButtonSocials-icon"]}`}
+      alt={alt}
+    />
+  );
 
-  const buttonClassName = `${isActive ? styles["ButtonSocials"] : ""} ${
-    styles[`ButtonSocials-${icon}`]
-  }`;
+  if (icon === "mail2") {
+    return (
+      <ButtonSocialsCopy value={link} className={className}>
+        {iconElement}
+      </ButtonSocialsCopy>
+    );
+  }
+
+  // Placeholder entries ("#" or empty) have no profile to link to yet
+  if (!link || link === "#") {
+    return (
+      <span className={className} aria-disabled="true">
+        {iconElement}
+      </span>
+    );
+  }
 
   return (
-    <Button
-      variant="ghost"
-      className={`${buttonClassName} cursor-pointer md:cursor-none cursor-target`}
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       title={link}
-      onClick={() => {
-        if (icon === "mail2") {
-          handleCopy();
-        } else {
-          window.open(link, "_blank", "noopener,noreferrer");
-        }
-      }}
+      aria-label={alt ?? icon}
+      className={className}
     >
-      <Icon
-        name={icon}
-        className={`md:cursor-none ${iconClass} ${styles["ButtonSocials-icon"]}`}
-        alt={alt}
-      />
-    </Button>
+      {iconElement}
+    </a>
   );
-};
+}

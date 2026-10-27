@@ -255,5 +255,23 @@
         "noip": "No IP Address Available"
       }
     }
+  },
+  "Metadata": {
+    "team": {
+      "title": "Our Team",
+      "description": "Meet the Silent Havoc airsoft team: our captains, vice captains and members based in Istanbul."
+    },
+    "joinUs": {
+      "title": "Join Us",
+      "description": "Want to play airsoft with Silent Havoc? Apply to join our Istanbul based airsoft team."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with the Silent Havoc airsoft team for games, events and collaborations."
+    },
+    "rules": {
+      "title": "Airsoft Rules",
+      "description": "General airsoft rules and safety guidelines every Silent Havoc player must follow."
+    }
   }
 }

@@ -1,5 +1,5 @@
 // react
-import React, { Children } from "react";
+import React from "react";
 
 // styles
 import styles from "@/components/ui/button/ButtonSlideX.module.css";

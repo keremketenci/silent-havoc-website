@@ -2331,4 +2331,5 @@
       </g>
     </g>
   </g>
+  <style>@keyframes eyePulse{0%{opacity:.5}100%{opacity:1}}#path4,#path134{animation:eyePulse 5s infinite alternate}</style>
 </svg>
